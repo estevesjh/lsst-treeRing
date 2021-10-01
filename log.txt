@@ -1,0 +1,6540 @@
+-bash: [2]+: command ntree_ring_fit_script.py:118: RuntimeWarning: divide by zero encountered in true_divide
+  return image1/image
+Starting Code
+
+starting raft: 1/22 
+
+RTM-004 11977
+-> done wiht all sensors in this raft
+
+starting raft: 2/22 
+
+RTM-005 11852
+----------
+e2v: R23_S12
+xl,xh: -0.00164, 0.00157
+Orientation: 1
+rms: -0.00020977968643140973
+cuts: 1596, 2500
+
+xl,xh: -0.00167, 0.00159
+Orientation: 2
+rms: -0.00018025012681812029
+cuts: 1596, 1504
+
+xl,xh: -0.00166, 0.00162
+Orientation: 3
+rms: -0.00017064842421891601
+cuts: 2500, 1504
+
+xl,xh: -0.00166, 0.00160
+Orientation: 4
+rms: -9.113012264570352e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4688.34, -608.89
+threshold: 0.00166
+
+     fun: -0.00020977968643140973
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([586.04232277, -76.11157166])
+
+----------
+e2v: R23_S00
+xl,xh: -0.00147, 0.00145
+Orientation: 1
+rms: -0.00015408162404839635
+cuts: 1596, 2500
+
+xl,xh: -0.00143, 0.00139
+Orientation: 2
+rms: -9.420024502971052e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00148, 0.00145
+Orientation: 3
+rms: -9.258046029762643e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00149, 0.00149
+Orientation: 4
+rms: -0.0001741859037673891
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -121.37, -789.95
+threshold: 0.00149
+
+     fun: -0.0001741859037673891
+ message: 'Optimization terminated successfully.'
+    nfev: 273
+     nit: 2
+ success: True
+       x: array([-15.17091714, -98.74360221])
+
+----------
+e2v: R23_S01
+xl,xh: -0.00104, 0.00102
+Orientation: 1
+rms: -0.00010093267714822015
+cuts: 1596, 2500
+
+xl,xh: -0.00102, 0.00097
+Orientation: 2
+rms: -6.428159690398211e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00105, 0.00104
+Orientation: 3
+rms: -8.006011472261611e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00107, 0.00109
+Orientation: 4
+rms: -0.00014852473686704875
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -476.34, -672.50
+threshold: 0.00109
+
+     fun: -0.00014852473686704875
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-59.54246309, -84.06240673])
+
+----------
+e2v: R23_S02
+xl,xh: -0.00176, 0.00171
+Orientation: 1
+rms: -0.00021084633078730466
+cuts: 1596, 2500
+
+xl,xh: -0.00177, 0.00169
+Orientation: 2
+rms: -0.00013794211848461012
+cuts: 1596, 1504
+
+xl,xh: -0.00184, 0.00179
+Orientation: 3
+rms: -0.000137462661954901
+cuts: 2500, 1504
+
+xl,xh: -0.00185, 0.00183
+Orientation: 4
+rms: -0.00022416369311249767
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -563.45, -595.69
+threshold: 0.00185
+
+     fun: -0.00022416369311249767
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-70.43105434, -74.46066008])
+
+----------
+e2v: R23_S21
+xl,xh: -0.00166, 0.00159
+Orientation: 1
+rms: -0.00015698262085656598
+cuts: 1596, 2500
+
+xl,xh: -0.00163, 0.00156
+Orientation: 2
+rms: -0.00015650183704515714
+cuts: 1596, 1504
+
+xl,xh: -0.00169, 0.00163
+Orientation: 3
+rms: -0.00015581306576243625
+cuts: 2500, 1504
+
+xl,xh: -0.00173, 0.00167
+Orientation: 4
+rms: -0.00022671465072259848
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -428.64, -548.05
+threshold: 0.00173
+
+     fun: -0.00022671465072259848
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-53.57997719, -68.50592214])
+
+----------
+e2v: R23_S22
+xl,xh: -0.00186, 0.00178
+Orientation: 1
+rms: -0.00017060745638560002
+cuts: 1596, 2500
+
+xl,xh: -0.00184, 0.00175
+Orientation: 2
+rms: -0.00019181194470431655
+cuts: 1596, 1504
+
+xl,xh: -0.00186, 0.00178
+Orientation: 3
+rms: -0.0001491344660277134
+cuts: 2500, 1504
+
+xl,xh: -0.00188, 0.00182
+Orientation: 4
+rms: -0.00018588046969557787
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4178.33, 4640.11
+threshold: 0.00188
+
+     fun: -0.00019181194470431655
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([522.29110104, 580.01381259])
+
+----------
+e2v: R23_S10
+xl,xh: -0.00133, 0.00128
+Orientation: 1
+rms: -0.0001349540689584406
+cuts: 1596, 2500
+
+xl,xh: -0.00132, 0.00125
+Orientation: 2
+rms: -8.519523975596138e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00139, 0.00135
+Orientation: 3
+rms: -0.00011105357630863762
+cuts: 2500, 1504
+
+xl,xh: -0.00140, 0.00137
+Orientation: 4
+rms: -0.00017314408655311103
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -401.53, -514.63
+threshold: 0.00140
+
+     fun: -0.00017314408655311103
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-50.19146809, -64.32915504])
+
+----------
+e2v: R23_S11
+xl,xh: -0.00185, 0.00177
+Orientation: 1
+rms: -0.0001972726871470389
+cuts: 1596, 2500
+
+xl,xh: -0.00181, 0.00173
+Orientation: 2
+rms: -0.0001028759301484567
+cuts: 1596, 1504
+
+xl,xh: -0.00181, 0.00175
+Orientation: 3
+rms: -0.00010780869518037031
+cuts: 2500, 1504
+
+xl,xh: -0.00184, 0.00177
+Orientation: 4
+rms: -8.827453883177239e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4530.29, -564.96
+threshold: 0.00184
+
+     fun: -0.0001972726871470389
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([566.28620513, -70.62013799])
+
+----------
+e2v: R23_S20
+xl,xh: -0.00175, 0.00166
+Orientation: 1
+rms: -0.00014623896315189895
+cuts: 1596, 2500
+
+xl,xh: -0.00174, 0.00165
+Orientation: 2
+rms: -0.0001919031731920907
+cuts: 1596, 1504
+
+xl,xh: -0.00175, 0.00169
+Orientation: 3
+rms: -0.00013870305423048325
+cuts: 2500, 1504
+
+xl,xh: -0.00176, 0.00169
+Orientation: 4
+rms: -0.00020302396574277252
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -363.17, -585.19
+threshold: 0.00176
+
+     fun: -0.00020302396574277252
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([-45.39664606, -73.14877543])
+
+-> done wiht all sensors in this raft
+
+starting raft: 3/22 
+
+RTM-006 11746
+----------
+e2v: R14_S12
+xl,xh: -0.00125, 0.00117
+Orientation: 1
+rms: -0.00010540402166219674
+cuts: 1596, 2500
+
+xl,xh: -0.00123, 0.00113
+Orientation: 2
+rms: -6.16367112810935e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00131, 0.00124
+Orientation: 3
+rms: -0.0001173255655668979
+cuts: 2500, 1504
+
+xl,xh: -0.00135, 0.00128
+Orientation: 4
+rms: -0.0001874178329002576
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -452.45, -591.50
+threshold: 0.00135
+
+     fun: -0.0001874178329002576
+ message: 'Optimization terminated successfully.'
+    nfev: 1623
+     nit: 17
+ success: True
+       x: array([-56.55625808, -73.93748105])
+
+----------
+e2v: R14_S00
+xl,xh: -0.00157, 0.00152
+Orientation: 1
+rms: -0.0001653257731477439
+cuts: 1596, 2500
+
+xl,xh: -0.00153, 0.00147
+Orientation: 2
+rms: -0.0001544094250908124
+cuts: 1596, 1504
+
+xl,xh: -0.00151, 0.00150
+Orientation: 3
+rms: -6.427053078844252e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00157, 0.00155
+Orientation: 4
+rms: -0.00012618928529576062
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4131.11, -773.89
+threshold: 0.00157
+
+     fun: -0.0001653257731477439
+ message: 'Optimization terminated successfully.'
+    nfev: 453
+     nit: 4
+ success: True
+       x: array([516.38866243, -96.73636442])
+
+----------
+e2v: R14_S01
+xl,xh: -0.00143, 0.00136
+Orientation: 1
+rms: -0.0001180490085917618
+cuts: 1596, 2500
+
+xl,xh: -0.00141, 0.00133
+Orientation: 2
+rms: -0.00011428079980370738
+cuts: 1596, 1504
+
+xl,xh: -0.00143, 0.00137
+Orientation: 3
+rms: -0.00010276418289593533
+cuts: 2500, 1504
+
+xl,xh: -0.00146, 0.00141
+Orientation: 4
+rms: -0.00011042464286733669
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4471.67, -110.67
+threshold: 0.00146
+
+     fun: -0.0001180490085917618
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([558.95884684, -13.8335986 ])
+
+----------
+e2v: R14_S02
+xl,xh: -0.00182, 0.00170
+Orientation: 1
+rms: -0.00022873191844893518
+cuts: 1596, 2500
+
+xl,xh: -0.00176, 0.00164
+Orientation: 2
+rms: -8.692022331805062e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00179, 0.00170
+Orientation: 3
+rms: -0.00013517828336923247
+cuts: 2500, 1504
+
+xl,xh: -0.00185, 0.00177
+Orientation: 4
+rms: -0.00017263292431013539
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4096.83, -731.91
+threshold: 0.00185
+
+     fun: -0.00022873191844893518
+ message: 'Optimization terminated successfully.'
+    nfev: 2613
+     nit: 28
+ success: True
+       x: array([512.10398724, -91.4885456 ])
+
+----------
+e2v: R14_S21
+xl,xh: -0.00213, 0.00201
+Orientation: 1
+rms: -0.0002541331654807153
+cuts: 1596, 2500
+
+xl,xh: -0.00207, 0.00195
+Orientation: 2
+rms: -0.0001376738423824213
+cuts: 1596, 1504
+
+xl,xh: -0.00202, 0.00195
+Orientation: 3
+rms: -0.00010995502720133058
+cuts: 2500, 1504
+
+xl,xh: -0.00208, 0.00198
+Orientation: 4
+rms: -0.00010624383268309749
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4178.53, -102.85
+threshold: 0.00208
+
+     fun: -0.0002541331654807153
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([522.31630023, -12.85654944])
+
+----------
+e2v: R14_S22
+xl,xh: -0.00175, 0.00167
+Orientation: 1
+rms: -0.00017210856901170017
+cuts: 1596, 2500
+
+xl,xh: -0.00167, 0.00158
+Orientation: 2
+rms: -0.0001862179394120826
+cuts: 1596, 1504
+
+xl,xh: -0.00163, 0.00156
+Orientation: 3
+rms: -9.126473745073905e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00171, 0.00164
+Orientation: 4
+rms: -0.00010156891113826306
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4099.44, 4801.64
+threshold: 0.00171
+
+     fun: -0.0001862179394120826
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([512.43041158, 600.20441271])
+
+----------
+e2v: R14_S10
+xl,xh: -0.00188, 0.00179
+Orientation: 1
+rms: -0.0001595215214013183
+cuts: 1596, 2500
+
+xl,xh: -0.00182, 0.00174
+Orientation: 2
+rms: -0.0001401494379023345
+cuts: 1596, 1504
+
+xl,xh: -0.00180, 0.00176
+Orientation: 3
+rms: -9.755262855345516e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00187, 0.00181
+Orientation: 4
+rms: -0.0001800048244707702
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -442.48, -529.33
+threshold: 0.00187
+
+     fun: -0.0001800048244707702
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-55.30982984, -66.16637522])
+
+----------
+e2v: R14_S11
+xl,xh: -0.00182, 0.00170
+Orientation: 1
+rms: -0.0001540852614880207
+cuts: 1596, 2500
+
+xl,xh: -0.00178, 0.00166
+Orientation: 2
+rms: -9.4538417789725e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00189, 0.00176
+Orientation: 3
+rms: -0.00013500867786948019
+cuts: 2500, 1504
+
+xl,xh: -0.00193, 0.00179
+Orientation: 4
+rms: -0.0001869019153376612
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -258.29, -485.15
+threshold: 0.00193
+
+     fun: -0.0001869019153376612
+ message: 'Optimization terminated successfully.'
+    nfev: 1983
+     nit: 21
+ success: True
+       x: array([-32.28678314, -60.64321073])
+
+----------
+e2v: R14_S20
+xl,xh: -0.00186, 0.00176
+Orientation: 1
+rms: -9.658737243721069e-05
+cuts: 1596, 2500
+
+xl,xh: -0.00181, 0.00171
+Orientation: 2
+rms: -0.00018819310798585598
+cuts: 1596, 1504
+
+xl,xh: -0.00181, 0.00174
+Orientation: 3
+rms: -0.00017451082234370808
+cuts: 2500, 1504
+
+xl,xh: -0.00189, 0.00181
+Orientation: 4
+rms: -0.00021814791512861427
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -636.71, -621.75
+threshold: 0.00189
+
+     fun: -0.00021814791512861427
+ message: 'Optimization terminated successfully.'
+    nfev: 1353
+     nit: 14
+ success: True
+       x: array([-79.5885894 , -77.71821205])
+
+-> done wiht all sensors in this raft
+
+starting raft: 4/22 
+
+RTM-007 11903
+----------
+e2v: R31_S12
+xl,xh: -0.00153, 0.00144
+Orientation: 1
+rms: -0.00010434826531876424
+cuts: 1596, 2500
+
+xl,xh: -0.00151, 0.00141
+Orientation: 2
+rms: -0.00011806806996737508
+cuts: 1596, 1504
+
+xl,xh: -0.00151, 0.00143
+Orientation: 3
+rms: -0.00015906505734248271
+cuts: 2500, 1504
+
+xl,xh: -0.00152, 0.00146
+Orientation: 4
+rms: -8.859271749699608e-05
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -644.47, 4531.81
+threshold: 0.00152
+
+     fun: -0.00015906505734248271
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-80.55815954, 566.47613249])
+
+----------
+e2v: R31_S00
+xl,xh: -0.00217, 0.00205
+Orientation: 1
+rms: -0.0002505346183344004
+cuts: 1596, 2500
+
+xl,xh: -0.00208, 0.00195
+Orientation: 2
+rms: -0.00011682208981078404
+cuts: 1596, 1504
+
+xl,xh: -0.00204, 0.00196
+Orientation: 3
+rms: -0.00015374266109895057
+cuts: 2500, 1504
+
+xl,xh: -0.00210, 0.00202
+Orientation: 4
+rms: -0.00012180592277362225
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4330.62, -204.76
+threshold: 0.00210
+
+     fun: -0.0002505346183344004
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([541.32723756, -25.59451106])
+
+----------
+e2v: R31_S01
+xl,xh: -0.00172, 0.00167
+Orientation: 1
+rms: -0.00012527219611126972
+cuts: 1596, 2500
+
+xl,xh: -0.00172, 0.00166
+Orientation: 2
+rms: -0.00013313288174251486
+cuts: 1596, 1504
+
+xl,xh: -0.00183, 0.00179
+Orientation: 3
+rms: -0.00011798666476668643
+cuts: 2500, 1504
+
+xl,xh: -0.00181, 0.00179
+Orientation: 4
+rms: -0.0002143164818604164
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -482.54, -568.19
+threshold: 0.00181
+
+     fun: -0.0002143164818604164
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-60.31737118, -71.02412871])
+
+----------
+e2v: R31_S02
+xl,xh: -0.00179, 0.00166
+Orientation: 1
+rms: -0.00020713410795514286
+cuts: 1596, 2500
+
+xl,xh: -0.00175, 0.00161
+Orientation: 2
+rms: -0.00013059891017378795
+cuts: 1596, 1504
+
+xl,xh: -0.00180, 0.00166
+Orientation: 3
+rms: -0.0001114087525422754
+cuts: 2500, 1504
+
+xl,xh: -0.00187, 0.00172
+Orientation: 4
+rms: -0.00018123579060496848
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4599.06, -628.35
+threshold: 0.00187
+
+     fun: -0.00020713410795514286
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([574.88299101, -78.54327112])
+
+----------
+e2v: R31_S21
+xl,xh: -0.00169, 0.00163
+Orientation: 1
+rms: -0.00012613246100035623
+cuts: 1596, 2500
+
+xl,xh: -0.00166, 0.00161
+Orientation: 2
+rms: -0.0001377087656925658
+cuts: 1596, 1504
+
+xl,xh: -0.00171, 0.00165
+Orientation: 3
+rms: -7.674742779107388e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00178, 0.00169
+Orientation: 4
+rms: -0.00020231524596285303
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -497.34, -578.41
+threshold: 0.00178
+
+     fun: -0.00020231524596285303
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([-62.16722202, -72.30081927])
+
+----------
+e2v: R31_S22
+xl,xh: -0.00194, 0.00187
+Orientation: 1
+rms: -0.00018996274041663494
+cuts: 1596, 2500
+
+xl,xh: -0.00193, 0.00183
+Orientation: 2
+rms: -0.0001680306558839257
+cuts: 1596, 1504
+
+xl,xh: -0.00198, 0.00190
+Orientation: 3
+rms: -0.00014981031499421724
+cuts: 2500, 1504
+
+xl,xh: -0.00199, 0.00194
+Orientation: 4
+rms: -0.0001816721110566571
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4512.57, -371.32
+threshold: 0.00199
+
+     fun: -0.00018996274041663494
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([564.07066866, -46.41557376])
+
+----------
+e2v: R31_S10
+xl,xh: -0.00209, 0.00194
+Orientation: 1
+rms: -0.0002529047302140892
+cuts: 1596, 2500
+
+xl,xh: -0.00204, 0.00191
+Orientation: 2
+rms: -0.00014628844374730198
+cuts: 1596, 1504
+
+xl,xh: -0.00204, 0.00196
+Orientation: 3
+rms: -0.00013940717547746906
+cuts: 2500, 1504
+
+xl,xh: -0.00208, 0.00196
+Orientation: 4
+rms: -0.00015195467881078153
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4552.89, -435.99
+threshold: 0.00208
+
+     fun: -0.0002529047302140892
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([569.11081817, -54.49936875])
+
+----------
+e2v: R31_S11
+xl,xh: -0.00181, 0.00175
+Orientation: 1
+rms: -0.00019552712558652957
+cuts: 1596, 2500
+
+xl,xh: -0.00179, 0.00173
+Orientation: 2
+rms: -0.00010037976925466054
+cuts: 1596, 1504
+
+xl,xh: -0.00178, 0.00173
+Orientation: 3
+rms: -0.00010278902573028667
+cuts: 2500, 1504
+
+xl,xh: -0.00181, 0.00175
+Orientation: 4
+rms: -9.984364528104458e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4602.56, -531.21
+threshold: 0.00181
+
+     fun: -0.00019552712558652957
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([575.31946383, -66.40110487])
+
+----------
+e2v: R31_S20
+xl,xh: -0.00195, 0.00181
+Orientation: 1
+rms: -0.00027067754179256636
+cuts: 1596, 2500
+
+xl,xh: -0.00195, 0.00178
+Orientation: 2
+rms: -0.00018232615407847683
+cuts: 1596, 1504
+
+xl,xh: -0.00196, 0.00182
+Orientation: 3
+rms: -0.0001528128945771494
+cuts: 2500, 1504
+
+xl,xh: -0.00199, 0.00185
+Orientation: 4
+rms: -0.000117851745479467
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4261.12, -206.11
+threshold: 0.00199
+
+     fun: -0.00027067754179256636
+ message: 'Optimization terminated successfully.'
+    nfev: 2613
+     nit: 28
+ success: True
+       x: array([532.64038957, -25.76394871])
+
+-> done wiht all sensors in this raft
+
+starting raft: 5/22 
+
+RTM-008 11952
+----------
+e2v: R34_S12
+xl,xh: -0.00139, 0.00118
+Orientation: 1
+rms: -0.00013514310622101511
+cuts: 1596, 2500
+
+xl,xh: -0.00138, 0.00116
+Orientation: 2
+rms: -0.00011013498711197588
+cuts: 1596, 1504
+
+xl,xh: -0.00139, 0.00117
+Orientation: 3
+rms: -7.27255817250008e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00139, 0.00118
+Orientation: 4
+rms: -9.917011897389787e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4113.08, -507.84
+threshold: 0.00139
+
+     fun: -0.00013514310622101511
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([514.13459295, -63.48003751])
+
+----------
+e2v: R34_S00
+xl,xh: -0.00174, 0.00167
+Orientation: 1
+rms: -0.00014435299524074872
+cuts: 1596, 2500
+
+xl,xh: -0.00168, 0.00160
+Orientation: 2
+rms: -0.0001522440007610709
+cuts: 1596, 1504
+
+xl,xh: -0.00170, 0.00164
+Orientation: 3
+rms: -9.811890053485794e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00172, 0.00167
+Orientation: 4
+rms: -0.00018135760898995646
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -531.31, -655.29
+threshold: 0.00172
+
+     fun: -0.00018135760898995646
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-66.41429396, -81.91120562])
+
+----------
+e2v: R34_S01
+xl,xh: -0.00113, 0.00113
+Orientation: 1
+rms: -0.000135944131198249
+cuts: 1596, 2500
+
+xl,xh: -0.00116, 0.00112
+Orientation: 2
+rms: -8.5879345015387e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00117, 0.00113
+Orientation: 3
+rms: -0.00012948273469855519
+cuts: 2500, 1504
+
+xl,xh: -0.00114, 0.00113
+Orientation: 4
+rms: -0.00014764373660448813
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -185.18, -459.17
+threshold: 0.00114
+
+     fun: -0.00014764373660448813
+ message: 'Optimization terminated successfully.'
+    nfev: 453
+     nit: 4
+ success: True
+       x: array([-23.14709917, -57.39651006])
+
+----------
+e2v: R34_S02
+xl,xh: -0.00136, 0.00118
+Orientation: 1
+rms: -0.00016955975778794113
+cuts: 1596, 2500
+
+xl,xh: -0.00138, 0.00121
+Orientation: 2
+rms: -8.455909359976147e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00138, 0.00123
+Orientation: 3
+rms: -8.441560449105131e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00136, 0.00120
+Orientation: 4
+rms: -8.564358593633323e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4159.50, -32.09
+threshold: 0.00136
+
+     fun: -0.00016955975778794113
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([519.93801633,  -4.01167372])
+
+----------
+e2v: R34_S21
+xl,xh: -0.00162, 0.00150
+Orientation: 1
+rms: -0.00020342817222370195
+cuts: 1596, 2500
+
+xl,xh: -0.00168, 0.00151
+Orientation: 2
+rms: -0.00011783734525321795
+cuts: 1596, 1504
+
+xl,xh: -0.00167, 0.00156
+Orientation: 3
+rms: -9.882152277200106e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00165, 0.00155
+Orientation: 4
+rms: -9.935388893924557e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4657.06, -551.59
+threshold: 0.00165
+
+     fun: -0.00020342817222370195
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([582.13278186, -68.94931269])
+
+----------
+e2v: R34_S22
+xl,xh: -0.00210, 0.00192
+Orientation: 1
+rms: -0.00024373950350738876
+cuts: 1596, 2500
+
+xl,xh: -0.00206, 0.00186
+Orientation: 2
+rms: -0.0002099248467414903
+cuts: 1596, 1504
+
+xl,xh: -0.00203, 0.00186
+Orientation: 3
+rms: -0.00015077056184531931
+cuts: 2500, 1504
+
+xl,xh: -0.00209, 0.00192
+Orientation: 4
+rms: -0.00012185990094133285
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4431.56, -579.27
+threshold: 0.00209
+
+     fun: -0.00024373950350738876
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([553.9454817 , -72.40846018])
+
+----------
+e2v: R34_S10
+xl,xh: -0.00192, 0.00177
+Orientation: 1
+rms: -0.00021333623887023826
+cuts: 1596, 2500
+
+xl,xh: -0.00187, 0.00176
+Orientation: 2
+rms: -0.00015540068548199838
+cuts: 1596, 1504
+
+xl,xh: -0.00186, 0.00177
+Orientation: 3
+rms: -8.189645517531087e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00191, 0.00177
+Orientation: 4
+rms: -9.107062112472204e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4130.64, -422.83
+threshold: 0.00191
+
+     fun: -0.00021333623887023826
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([516.33050192, -52.85335753])
+
+----------
+e2v: R34_S11
+xl,xh: -0.00124, 0.00116
+Orientation: 1
+rms: -0.00011611247264932742
+cuts: 1596, 2500
+
+xl,xh: -0.00117, 0.00108
+Orientation: 2
+rms: -7.422315492026055e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00124, 0.00119
+Orientation: 3
+rms: -8.920237044166846e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00130, 0.00124
+Orientation: 4
+rms: -0.000157590427655006
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -303.31, -455.26
+threshold: 0.00130
+
+     fun: -0.000157590427655006
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-37.91392824, -56.9077199 ])
+
+----------
+e2v: R34_S20
+xl,xh: -0.00228, 0.00210
+Orientation: 1
+rms: -0.0003105677414052181
+cuts: 1596, 2500
+
+xl,xh: -0.00226, 0.00208
+Orientation: 2
+rms: -0.0002450882187730558
+cuts: 1596, 1504
+
+xl,xh: -0.00223, 0.00210
+Orientation: 3
+rms: -0.00020290550872148548
+cuts: 2500, 1504
+
+xl,xh: -0.00226, 0.00211
+Orientation: 4
+rms: -0.00015827279826102422
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4391.43, -309.48
+threshold: 0.00226
+
+     fun: -0.0003105677414052181
+ message: 'Optimization terminated successfully.'
+    nfev: 3243
+     nit: 35
+ success: True
+       x: array([548.92910827, -38.68526559])
+
+-> done wiht all sensors in this raft
+
+starting raft: 6/22 
+
+RTM-009 11415
+----------
+e2v: R12_S12
+xl,xh: -0.00139, 0.00129
+Orientation: 1
+rms: -0.00012929801988477874
+cuts: 1596, 2500
+
+xl,xh: -0.00136, 0.00126
+Orientation: 2
+rms: -0.00012009050539142407
+cuts: 1596, 1504
+
+xl,xh: -0.00135, 0.00129
+Orientation: 3
+rms: -7.979886118090116e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00138, 0.00131
+Orientation: 4
+rms: -9.910377360913281e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4134.21, -667.95
+threshold: 0.00138
+
+     fun: -0.00012929801988477874
+ message: 'Optimization terminated successfully.'
+    nfev: 2703
+     nit: 29
+ success: True
+       x: array([516.77682423, -83.49428492])
+
+----------
+e2v: R12_S00
+xl,xh: -0.00177, 0.00173
+Orientation: 1
+rms: -0.00014158931408687675
+cuts: 1596, 2500
+
+xl,xh: -0.00170, 0.00164
+Orientation: 2
+rms: -8.91691797038014e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00171, 0.00168
+Orientation: 3
+rms: -9.771300681515578e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00175, 0.00173
+Orientation: 4
+rms: -0.00024310877745564992
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -369.25, -560.57
+threshold: 0.00175
+
+     fun: -0.00024310877745564992
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-46.15672017, -70.07115609])
+
+----------
+e2v: R12_S01
+xl,xh: -0.00152, 0.00146
+Orientation: 1
+rms: -0.00012831653957051656
+cuts: 1596, 2500
+
+xl,xh: -0.00149, 0.00142
+Orientation: 2
+rms: -8.22356179123954e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00153, 0.00148
+Orientation: 3
+rms: -9.398676000320043e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00155, 0.00153
+Orientation: 4
+rms: -0.00012874998283073167
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -623.70, -661.60
+threshold: 0.00155
+
+     fun: -0.00012874998283073167
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([-77.96228738, -82.69999784])
+
+----------
+e2v: R12_S02
+xl,xh: -0.00138, 0.00132
+Orientation: 1
+rms: -0.0001291969764454917
+cuts: 1596, 2500
+
+xl,xh: -0.00141, 0.00133
+Orientation: 2
+rms: -0.00018230664344367716
+cuts: 1596, 1504
+
+xl,xh: -0.00143, 0.00138
+Orientation: 3
+rms: -0.00011016185432674949
+cuts: 2500, 1504
+
+xl,xh: -0.00138, 0.00134
+Orientation: 4
+rms: -9.869149510166589e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4634.54, 4483.62
+threshold: 0.00138
+
+     fun: -0.00018230664344367716
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([579.31807244, 560.45192875])
+
+----------
+e2v: R12_S21
+xl,xh: -0.00154, 0.00148
+Orientation: 1
+rms: -0.00010282812813876532
+cuts: 1596, 2500
+
+xl,xh: -0.00150, 0.00144
+Orientation: 2
+rms: -0.00015119129024664297
+cuts: 1596, 1504
+
+xl,xh: -0.00158, 0.00152
+Orientation: 3
+rms: -0.00011772880346295232
+cuts: 2500, 1504
+
+xl,xh: -0.00164, 0.00157
+Orientation: 4
+rms: -0.00020442770124043565
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -492.84, -580.87
+threshold: 0.00164
+
+     fun: -0.00020442770124043565
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-61.60475836, -72.60914702])
+
+----------
+e2v: R12_S22
+xl,xh: -0.00116, 0.00109
+Orientation: 1
+rms: -0.0001424681928186581
+cuts: 1596, 2500
+
+xl,xh: -0.00115, 0.00108
+Orientation: 2
+rms: -9.896437418277138e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00118, 0.00112
+Orientation: 3
+rms: -0.00011062784941682039
+cuts: 2500, 1504
+
+xl,xh: -0.00120, 0.00114
+Orientation: 4
+rms: -9.746835216351842e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4137.75, -652.72
+threshold: 0.00120
+
+     fun: -0.0001424681928186581
+ message: 'Optimization terminated successfully.'
+    nfev: 453
+     nit: 4
+ success: True
+       x: array([517.21894918, -81.59027981])
+
+----------
+e2v: R12_S10
+xl,xh: -0.00143, 0.00139
+Orientation: 1
+rms: -9.84439318371291e-05
+cuts: 1596, 2500
+
+xl,xh: -0.00139, 0.00135
+Orientation: 2
+rms: -9.524703571342768e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00141, 0.00139
+Orientation: 3
+rms: -9.387331158610043e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00145, 0.00143
+Orientation: 4
+rms: -0.00016404066071196825
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -412.79, -601.15
+threshold: 0.00145
+
+     fun: -0.00016404066071196825
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([-51.59832308, -75.14350008])
+
+----------
+e2v: R12_S11
+xl,xh: -0.00155, 0.00148
+Orientation: 1
+rms: -0.00019385769427153647
+cuts: 1596, 2500
+
+xl,xh: -0.00154, 0.00147
+Orientation: 2
+rms: -0.00012284188318618702
+cuts: 1596, 1504
+
+xl,xh: -0.00154, 0.00151
+Orientation: 3
+rms: -0.00011248405710547511
+cuts: 2500, 1504
+
+xl,xh: -0.00156, 0.00150
+Orientation: 4
+rms: -9.974083958492761e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4476.26, -479.50
+threshold: 0.00156
+
+     fun: -0.00019385769427153647
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([559.53210722, -59.93758263])
+
+----------
+e2v: R12_S20
+xl,xh: -0.00093, 0.00088
+Orientation: 1
+rms: -0.00010733062303165404
+cuts: 1596, 2500
+
+xl,xh: -0.00091, 0.00086
+Orientation: 2
+rms: -6.664281693067715e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00095, 0.00092
+Orientation: 3
+rms: -0.00010161262544983884
+cuts: 2500, 1504
+
+xl,xh: -0.00097, 0.00093
+Orientation: 4
+rms: -0.00015646611484973298
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -272.75, -454.92
+threshold: 0.00097
+
+     fun: -0.00015646611484973298
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-34.09365315, -56.86529528])
+
+-> done wiht all sensors in this raft
+
+starting raft: 7/22 
+
+RTM-010 12139
+----------
+e2v: R33_S12
+xl,xh: -0.00111, 0.00105
+Orientation: 1
+rms: -0.00012013005050343874
+cuts: 1596, 2500
+
+xl,xh: -0.00114, 0.00106
+Orientation: 2
+rms: -0.00015102973049520153
+cuts: 1596, 1504
+
+xl,xh: -0.00116, 0.00110
+Orientation: 3
+rms: -9.959478750811137e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00115, 0.00109
+Orientation: 4
+rms: -6.494139358542685e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4654.68, 4516.56
+threshold: 0.00115
+
+     fun: -0.00015102973049520153
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([581.8346809 , 564.56937839])
+
+----------
+e2v: R33_S00
+xl,xh: -0.00118, 0.00113
+Orientation: 1
+rms: -0.00011932964533912115
+cuts: 1596, 2500
+
+xl,xh: -0.00115, 0.00109
+Orientation: 2
+rms: -0.00012087182927020294
+cuts: 1596, 1504
+
+xl,xh: -0.00112, 0.00108
+Orientation: 3
+rms: -7.145838138493841e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00111, 0.00110
+Orientation: 4
+rms: -0.00011307610639554934
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4346.25, 4052.63
+threshold: 0.00111
+
+     fun: -0.00012087182927020294
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([543.28073483, 506.57900006])
+
+----------
+e2v: R33_S01
+xl,xh: -0.00171, 0.00164
+Orientation: 1
+rms: -0.0001854212347816807
+cuts: 1596, 2500
+
+xl,xh: -0.00170, 0.00162
+Orientation: 2
+rms: -0.00014680267381374443
+cuts: 1596, 1504
+
+xl,xh: -0.00171, 0.00164
+Orientation: 3
+rms: -8.99706118827144e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00171, 0.00165
+Orientation: 4
+rms: -0.00011875028526783522
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4399.92, -22.30
+threshold: 0.00171
+
+     fun: -0.0001854212347816807
+ message: 'Optimization terminated successfully.'
+    nfev: 1443
+     nit: 15
+ success: True
+       x: array([549.98996856,  -2.78721654])
+
+----------
+e2v: R33_S02
+xl,xh: -0.00177, 0.00167
+Orientation: 1
+rms: -0.0002787146673609856
+cuts: 1596, 2500
+
+xl,xh: -0.00173, 0.00164
+Orientation: 2
+rms: -9.575787443905254e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00167, 0.00164
+Orientation: 3
+rms: -9.905419201662195e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00172, 0.00167
+Orientation: 4
+rms: -0.00010627096587877531
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4433.88, -529.81
+threshold: 0.00172
+
+     fun: -0.0002787146673609856
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([554.23460388, -66.22574743])
+
+----------
+e2v: R33_S21
+xl,xh: -0.00163, 0.00155
+Orientation: 1
+rms: -0.00014405343829435326
+cuts: 1596, 2500
+
+xl,xh: -0.00164, 0.00156
+Orientation: 2
+rms: -0.00013755205432921616
+cuts: 1596, 1504
+
+xl,xh: -0.00164, 0.00158
+Orientation: 3
+rms: -0.00015738403989539883
+cuts: 2500, 1504
+
+xl,xh: -0.00162, 0.00154
+Orientation: 4
+rms: -0.00010075174785702035
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -48.33, 4720.44
+threshold: 0.00162
+
+     fun: -0.00015738403989539883
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([ -6.04126954, 590.05540669])
+
+----------
+e2v: R33_S22
+xl,xh: -0.00198, 0.00184
+Orientation: 1
+rms: -0.0002468931647803098
+cuts: 1596, 2500
+
+xl,xh: -0.00196, 0.00181
+Orientation: 2
+rms: -0.00018839321061994493
+cuts: 1596, 1504
+
+xl,xh: -0.00190, 0.00179
+Orientation: 3
+rms: -0.000196989475734801
+cuts: 2500, 1504
+
+xl,xh: -0.00192, 0.00182
+Orientation: 4
+rms: -9.177649399962148e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4472.40, -537.01
+threshold: 0.00192
+
+     fun: -0.0002468931647803098
+ message: 'Optimization terminated successfully.'
+    nfev: 1353
+     nit: 14
+ success: True
+       x: array([559.04978225, -67.12646526])
+
+----------
+e2v: R33_S10
+xl,xh: -0.00163, 0.00153
+Orientation: 1
+rms: -0.00016932371425015965
+cuts: 1596, 2500
+
+xl,xh: -0.00163, 0.00153
+Orientation: 2
+rms: -0.00011551389382096672
+cuts: 1596, 1504
+
+xl,xh: -0.00174, 0.00162
+Orientation: 3
+rms: -0.00011987987947850587
+cuts: 2500, 1504
+
+xl,xh: -0.00171, 0.00161
+Orientation: 4
+rms: -0.00019032486231907467
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -468.59, -621.79
+threshold: 0.00171
+
+     fun: -0.00019032486231907467
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-58.57379134, -77.72367315])
+
+----------
+e2v: R33_S11
+xl,xh: -0.00195, 0.00185
+Orientation: 1
+rms: -0.0002835348505621062
+cuts: 1596, 2500
+
+xl,xh: -0.00190, 0.00182
+Orientation: 2
+rms: -0.00012974796117118682
+cuts: 1596, 1504
+
+xl,xh: -0.00192, 0.00186
+Orientation: 3
+rms: -0.00012440945208494383
+cuts: 2500, 1504
+
+xl,xh: -0.00195, 0.00186
+Orientation: 4
+rms: -0.0002568753571879685
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4606.96, -622.06
+threshold: 0.00195
+
+     fun: -0.0002835348505621062
+ message: 'Optimization terminated successfully.'
+    nfev: 1443
+     nit: 15
+ success: True
+       x: array([575.8704834 , -77.75773317])
+
+----------
+e2v: R33_S20
+xl,xh: -0.00154, 0.00144
+Orientation: 1
+rms: -0.00018666715752734632
+cuts: 1596, 2500
+
+xl,xh: -0.00152, 0.00142
+Orientation: 2
+rms: -0.0001893975020876815
+cuts: 1596, 1504
+
+xl,xh: -0.00147, 0.00143
+Orientation: 3
+rms: -0.0001406973811734293
+cuts: 2500, 1504
+
+xl,xh: -0.00148, 0.00142
+Orientation: 4
+rms: -0.00010930694677139734
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4534.84, 4439.23
+threshold: 0.00148
+
+     fun: -0.0001893975020876815
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([566.85527189, 554.90360722])
+
+-> done wiht all sensors in this raft
+
+starting raft: 8/22 
+
+RTM-011 10861
+----------
+itl: R01_S12
+xl,xh: -0.00088, 0.00076
+Orientation: 1
+rms: -0.00010950796950752062
+cuts: 1572, 2500
+
+xl,xh: -0.00102, 0.00095
+Orientation: 2
+rms: -0.00013531817459522846
+cuts: 1572, 1500
+
+xl,xh: -0.00109, 0.00103
+Orientation: 3
+rms: -0.0001839121243005292
+cuts: 2500, 1500
+
+xl,xh: -0.00101, 0.00092
+Orientation: 4
+rms: -0.00015136402754454005
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -764.71, 4006.19
+threshold: 0.00101
+
+     fun: -0.0001839121243005292
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([-95.58850431, 500.77421154])
+
+----------
+itl: R01_S00
+xl,xh: -0.00130, 0.00110
+Orientation: 1
+rms: -0.0002340128785431165
+cuts: 1572, 2500
+
+xl,xh: -0.00155, 0.00128
+Orientation: 2
+rms: -0.00025699113524820335
+cuts: 1572, 1500
+
+xl,xh: -0.00087, 0.00075
+Orientation: 3
+rms: -0.00015903286396380082
+cuts: 2500, 1500
+
+xl,xh: -0.00075, 0.00066
+Orientation: 4
+rms: -8.322939682360295e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4124.55, 4464.27
+threshold: 0.00075
+
+     fun: -0.00025699113524820335
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([515.56926458, 558.0331699 ])
+
+----------
+itl: R01_S01
+xl,xh: -0.00099, 0.00092
+Orientation: 1
+rms: -0.000266115613668603
+cuts: 1572, 2500
+
+xl,xh: -0.00096, 0.00092
+Orientation: 2
+rms: -9.437626687633706e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00110, 0.00108
+Orientation: 3
+rms: -0.00016612679621570378
+cuts: 2500, 1500
+
+xl,xh: -0.00114, 0.00108
+Orientation: 4
+rms: -0.00013574004842851415
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4178.30, -321.40
+threshold: 0.00114
+
+     fun: -0.000266115613668603
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([522.28703155, -40.17522656])
+
+----------
+itl: R01_S02
+xl,xh: -0.00108, 0.00112
+Orientation: 1
+rms: -0.00011260247707827342
+cuts: 1572, 2500
+
+xl,xh: -0.00119, 0.00124
+Orientation: 2
+rms: -0.00011533298020700106
+cuts: 1572, 1500
+
+xl,xh: -0.00150, 0.00157
+Orientation: 3
+rms: -0.0002302709478449138
+cuts: 2500, 1500
+
+xl,xh: -0.00128, 0.00136
+Orientation: 4
+rms: -0.0001520902588814326
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -183.24, 4054.16
+threshold: 0.00136
+
+     fun: -0.0002302709478449138
+ message: 'Optimization terminated successfully.'
+    nfev: 273
+     nit: 2
+ success: True
+       x: array([-22.90441666, 506.76940553])
+
+----------
+itl: R01_S21
+xl,xh: -0.00196, 0.00190
+Orientation: 1
+rms: -0.00019322072903010188
+cuts: 1572, 2500
+
+xl,xh: -0.00191, 0.00189
+Orientation: 2
+rms: -0.00019092787818503917
+cuts: 1572, 1500
+
+xl,xh: -0.00219, 0.00215
+Orientation: 3
+rms: -0.00026982199577825033
+cuts: 2500, 1500
+
+xl,xh: -0.00214, 0.00207
+Orientation: 4
+rms: -0.00021587667432327955
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -43.42, 4770.30
+threshold: 0.00214
+
+     fun: -0.00026982199577825033
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([ -5.42742094, 596.28720706])
+
+----------
+itl: R01_S22
+xl,xh: -0.00175, 0.00159
+Orientation: 1
+rms: -0.0001648056782389423
+cuts: 1572, 2500
+
+xl,xh: -0.00179, 0.00166
+Orientation: 2
+rms: -0.00032271555545772545
+cuts: 1572, 1500
+
+xl,xh: -0.00184, 0.00170
+Orientation: 3
+rms: -0.00022119341427628936
+cuts: 2500, 1500
+
+xl,xh: -0.00172, 0.00156
+Orientation: 4
+rms: -0.00018728215801138603
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4212.46, 4115.80
+threshold: 0.00172
+
+     fun: -0.00032271555545772545
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([526.55787697, 514.47556469])
+
+----------
+itl: R01_S10
+xl,xh: -0.00082, 0.00078
+Orientation: 1
+rms: -0.0001215346369690522
+cuts: 1572, 2500
+
+xl,xh: -0.00090, 0.00092
+Orientation: 2
+rms: -8.17445080213294e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00105, 0.00110
+Orientation: 3
+rms: -9.848783375450984e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00088, 0.00086
+Orientation: 4
+rms: -8.50872090167824e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4852.33, -45.93
+threshold: 0.00088
+
+     fun: -0.0001215346369690522
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([606.54090885,  -5.74071858])
+
+----------
+itl: R01_S11
+xl,xh: -0.00086, 0.00081
+Orientation: 1
+rms: -0.00014544653611810656
+cuts: 1572, 2500
+
+xl,xh: -0.00090, 0.00083
+Orientation: 2
+rms: -0.00012573410866889817
+cuts: 1572, 1500
+
+xl,xh: -0.00102, 0.00095
+Orientation: 3
+rms: -9.783581376678765e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00098, 0.00093
+Orientation: 4
+rms: -0.00011036591286980867
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4102.97, -109.36
+threshold: 0.00098
+
+     fun: -0.00014544653611810656
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([512.87145196, -13.66979887])
+
+----------
+itl: R01_S20
+xl,xh: -0.00295, 0.00291
+Orientation: 1
+rms: -0.00021327039770307804
+cuts: 1572, 2500
+
+xl,xh: -0.00303, 0.00299
+Orientation: 2
+rms: -0.0004100693870181143
+cuts: 1572, 1500
+
+xl,xh: -0.00313, 0.00312
+Orientation: 3
+rms: -0.0004846668789678224
+cuts: 2500, 1500
+
+xl,xh: -0.00302, 0.00298
+Orientation: 4
+rms: -0.0002849887900381821
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -184.39, 4285.64
+threshold: 0.00302
+
+     fun: -0.0004846668789678224
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-23.04925967, 535.70445411])
+
+-> done wiht all sensors in this raft
+
+starting raft: 9/22 
+
+RTM-012 11063
+----------
+e2v: R30_S12
+xl,xh: -0.00141, 0.00133
+Orientation: 1
+rms: -0.00012266021078944476
+cuts: 1596, 2500
+
+xl,xh: -0.00135, 0.00128
+Orientation: 2
+rms: -0.00010538137898022058
+cuts: 1596, 1504
+
+xl,xh: -0.00136, 0.00131
+Orientation: 3
+rms: -7.86264428298995e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00143, 0.00137
+Orientation: 4
+rms: -0.00015830426670030508
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -188.59, -390.93
+threshold: 0.00143
+
+     fun: -0.00015830426670030508
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-23.57400629, -48.86666386])
+
+----------
+e2v: R30_S00
+xl,xh: -0.00134, 0.00131
+Orientation: 1
+rms: -0.00016226465355300652
+cuts: 1596, 2500
+
+xl,xh: -0.00128, 0.00123
+Orientation: 2
+rms: -8.381340903491438e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00125, 0.00123
+Orientation: 3
+rms: -8.18201496939348e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00127, 0.00127
+Orientation: 4
+rms: -0.00011002158515809252
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4619.52, -625.93
+threshold: 0.00127
+
+     fun: -0.00016226465355300652
+ message: 'Optimization terminated successfully.'
+    nfev: 2883
+     nit: 31
+ success: True
+       x: array([577.44007093, -78.24163347])
+
+----------
+e2v: R30_S01
+xl,xh: -0.00153, 0.00150
+Orientation: 1
+rms: -0.00015519287330459513
+cuts: 1596, 2500
+
+xl,xh: -0.00157, 0.00151
+Orientation: 2
+rms: -0.00010257674143908846
+cuts: 1596, 1504
+
+xl,xh: -0.00163, 0.00159
+Orientation: 3
+rms: -9.741370933773626e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00160, 0.00159
+Orientation: 4
+rms: -0.00014842521475890984
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4154.39, -63.08
+threshold: 0.00160
+
+     fun: -0.00015519287330459513
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([519.29896526,  -7.88519017])
+
+----------
+e2v: R30_S02
+xl,xh: -0.00099, 0.00095
+Orientation: 1
+rms: -7.665737840037486e-05
+cuts: 1596, 2500
+
+xl,xh: -0.00097, 0.00091
+Orientation: 2
+rms: -4.129190878805906e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00101, 0.00098
+Orientation: 3
+rms: -0.00012744886981536026
+cuts: 2500, 1504
+
+xl,xh: -0.00104, 0.00101
+Orientation: 4
+rms: -0.00018221682512546027
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -355.20, -563.93
+threshold: 0.00104
+
+     fun: -0.00018221682512546027
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-44.39941457, -70.49174577])
+
+----------
+e2v: R30_S21
+xl,xh: -0.00193, 0.00186
+Orientation: 1
+rms: -0.0002227074525172173
+cuts: 1596, 2500
+
+xl,xh: -0.00188, 0.00180
+Orientation: 2
+rms: -0.0001354519631806774
+cuts: 1596, 1504
+
+xl,xh: -0.00189, 0.00184
+Orientation: 3
+rms: -0.00013630516747196878
+cuts: 2500, 1504
+
+xl,xh: -0.00195, 0.00190
+Orientation: 4
+rms: -0.0001041929419833069
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4363.94, -384.58
+threshold: 0.00195
+
+     fun: -0.0002227074525172173
+ message: 'Optimization terminated successfully.'
+    nfev: 1263
+     nit: 13
+ success: True
+       x: array([545.49266573, -48.0726543 ])
+
+----------
+e2v: R30_S22
+xl,xh: -0.00110, 0.00106
+Orientation: 1
+rms: -0.00015294822983405833
+cuts: 1596, 2500
+
+xl,xh: -0.00110, 0.00105
+Orientation: 2
+rms: -0.0001508119202700665
+cuts: 1596, 1504
+
+xl,xh: -0.00112, 0.00107
+Orientation: 3
+rms: -0.00011051760511007163
+cuts: 2500, 1504
+
+xl,xh: -0.00112, 0.00110
+Orientation: 4
+rms: -0.00011042214454602629
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4879.90, -32.64
+threshold: 0.00112
+
+     fun: -0.00015294822983405833
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([609.98745934,  -4.07968902])
+
+----------
+e2v: R30_S10
+xl,xh: -0.00117, 0.00113
+Orientation: 1
+rms: -8.469946425339241e-05
+cuts: 1596, 2500
+
+xl,xh: -0.00113, 0.00109
+Orientation: 2
+rms: -8.750083191681695e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00115, 0.00112
+Orientation: 3
+rms: -7.996302779556956e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00119, 0.00118
+Orientation: 4
+rms: -0.00012554871887772025
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -236.80, -317.79
+threshold: 0.00119
+
+     fun: -0.00012554871887772025
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-29.59961392, -39.72430294])
+
+----------
+e2v: R30_S11
+xl,xh: -0.00165, 0.00158
+Orientation: 1
+rms: -0.00013104174656243542
+cuts: 1596, 2500
+
+xl,xh: -0.00158, 0.00151
+Orientation: 2
+rms: -9.515550311486029e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00162, 0.00159
+Orientation: 3
+rms: -0.00012722906836281736
+cuts: 2500, 1504
+
+xl,xh: -0.00170, 0.00166
+Orientation: 4
+rms: -0.00017239407930904238
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -314.77, -522.44
+threshold: 0.00170
+
+     fun: -0.00017239407930904238
+ message: 'Optimization terminated successfully.'
+    nfev: 1353
+     nit: 14
+ success: True
+       x: array([-39.34642937, -65.30536757])
+
+----------
+e2v: R30_S20
+xl,xh: -0.00175, 0.00167
+Orientation: 1
+rms: -0.00018884339864211547
+cuts: 1596, 2500
+
+xl,xh: -0.00176, 0.00165
+Orientation: 2
+rms: -0.00017423586726111558
+cuts: 1596, 1504
+
+xl,xh: -0.00172, 0.00167
+Orientation: 3
+rms: -0.00016441000228550466
+cuts: 2500, 1504
+
+xl,xh: -0.00174, 0.00168
+Orientation: 4
+rms: -0.00011694017207198999
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4548.19, -496.14
+threshold: 0.00174
+
+     fun: -0.00018884339864211547
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([568.52352967, -62.01768024])
+
+-> done wiht all sensors in this raft
+
+starting raft: 10/22 
+
+RTM-013 10982
+----------
+itl: R02_S12
+xl,xh: -0.00128, 0.00118
+Orientation: 1
+rms: -0.00014366645292719358
+cuts: 1572, 2500
+
+xl,xh: -0.00128, 0.00120
+Orientation: 2
+rms: -0.00012817491278703568
+cuts: 1572, 1500
+
+xl,xh: -0.00140, 0.00138
+Orientation: 3
+rms: -0.00014307158924569243
+cuts: 2500, 1500
+
+xl,xh: -0.00132, 0.00123
+Orientation: 4
+rms: -0.00018608612355667023
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -176.37, -8.98
+threshold: 0.00132
+
+     fun: -0.00018608612355667023
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([-22.04605196,  -1.12234062])
+
+----------
+itl: R02_S00
+xl,xh: -0.00095, 0.00086
+Orientation: 1
+rms: -0.00023655497368605462
+cuts: 1572, 2500
+
+xl,xh: -0.00086, 0.00079
+Orientation: 2
+rms: -0.00010355074128935527
+cuts: 1572, 1500
+
+xl,xh: -0.00088, 0.00080
+Orientation: 3
+rms: -5.713389343372868e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00091, 0.00082
+Orientation: 4
+rms: -7.201040987588188e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4151.54, -347.38
+threshold: 0.00091
+
+     fun: -0.00023655497368605462
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([518.94279668, -43.42202317])
+
+----------
+itl: R02_S01
+xl,xh: -0.00070, 0.00065
+Orientation: 1
+rms: -6.117548155887803e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00073, 0.00068
+Orientation: 2
+rms: -0.00018487381300613505
+cuts: 1572, 1500
+
+xl,xh: -0.00081, 0.00079
+Orientation: 3
+rms: -0.00010079895870578028
+cuts: 2500, 1500
+
+xl,xh: -0.00079, 0.00075
+Orientation: 4
+rms: -8.662936713967916e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4185.68, 4118.14
+threshold: 0.00079
+
+     fun: -0.00018487381300613505
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([523.21024827, 514.76729275])
+
+----------
+itl: R02_S02
+xl,xh: -0.00106, 0.00096
+Orientation: 1
+rms: -0.00014085496487296965
+cuts: 1572, 2500
+
+xl,xh: -0.00113, 0.00103
+Orientation: 2
+rms: -0.00016877110124809998
+cuts: 1572, 1500
+
+xl,xh: -0.00112, 0.00102
+Orientation: 3
+rms: -0.00024914914909645485
+cuts: 2500, 1500
+
+xl,xh: -0.00111, 0.00101
+Orientation: 4
+rms: -0.00014705742579851027
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -350.11, 4132.96
+threshold: 0.00111
+
+     fun: -0.00024914914909645485
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-43.76394381, 516.62004833])
+
+----------
+itl: R02_S21
+xl,xh: -0.00072, 0.00060
+Orientation: 1
+rms: -0.00011327524585367423
+cuts: 1572, 2500
+
+xl,xh: -0.00078, 0.00065
+Orientation: 2
+rms: -0.00021310836378487846
+cuts: 1572, 1500
+
+xl,xh: -0.00080, 0.00067
+Orientation: 3
+rms: -0.00010475254574813551
+cuts: 2500, 1500
+
+xl,xh: -0.00068, 0.00058
+Orientation: 4
+rms: -8.023488909162925e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4189.57, 4088.49
+threshold: 0.00068
+
+     fun: -0.00021310836378487846
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([523.69633906, 511.06162521])
+
+----------
+itl: R02_S22
+xl,xh: -0.00262, 0.00257
+Orientation: 1
+rms: -0.0003430000075902793
+cuts: 1572, 2500
+
+xl,xh: -0.00296, 0.00280
+Orientation: 2
+rms: -0.000439887541479761
+cuts: 1572, 1500
+
+xl,xh: -0.00336, 0.00326
+Orientation: 3
+rms: -0.0003313395816775806
+cuts: 2500, 1500
+
+xl,xh: -0.00335, 0.00334
+Orientation: 4
+rms: -0.000522344522002895
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -778.13, -20.57
+threshold: 0.00335
+
+     fun: -0.000522344522002895
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-97.26642123,  -2.57139648])
+
+----------
+itl: R02_S10
+xl,xh: -0.00281, 0.00274
+Orientation: 1
+rms: -0.0002757418514969425
+cuts: 1572, 2500
+
+xl,xh: -0.00237, 0.00233
+Orientation: 2
+rms: -0.00017521805094844662
+cuts: 1572, 1500
+
+xl,xh: -0.00254, 0.00250
+Orientation: 3
+rms: -0.00030820827794260006
+cuts: 2500, 1500
+
+xl,xh: -0.00298, 0.00294
+Orientation: 4
+rms: -0.0005329537831851909
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -215.16, -156.58
+threshold: 0.00298
+
+     fun: -0.0005329537831851909
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-26.89470431, -19.57281345])
+
+----------
+itl: R02_S11
+xl,xh: -0.00218, 0.00211
+Orientation: 1
+rms: -0.0002466842638989362
+cuts: 1572, 2500
+
+xl,xh: -0.00202, 0.00200
+Orientation: 2
+rms: -0.00018107743246747484
+cuts: 1572, 1500
+
+xl,xh: -0.00231, 0.00236
+Orientation: 3
+rms: -0.00015558669053593107
+cuts: 2500, 1500
+
+xl,xh: -0.00244, 0.00236
+Orientation: 4
+rms: -0.00035570031305232557
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -181.53, -244.95
+threshold: 0.00244
+
+     fun: -0.00035570031305232557
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-22.69065422, -30.61885939])
+
+----------
+itl: R02_S20
+xl,xh: -0.00283, 0.00285
+Orientation: 1
+rms: -0.00021951430836056606
+cuts: 1572, 2500
+
+xl,xh: -0.00272, 0.00277
+Orientation: 2
+rms: -0.00026200015173988696
+cuts: 1572, 1500
+
+xl,xh: -0.00296, 0.00301
+Orientation: 3
+rms: -0.0002476487874798908
+cuts: 2500, 1500
+
+xl,xh: -0.00309, 0.00305
+Orientation: 4
+rms: -0.00029159922641333483
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -789.14, -21.94
+threshold: 0.00309
+
+     fun: -0.00029159922641333483
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([-98.64257932,  -2.74223376])
+
+-> done wiht all sensors in this raft
+
+starting raft: 11/22 
+
+RTM-014 10928
+----------
+itl: R20_S12
+xl,xh: -0.00121, 0.00111
+Orientation: 1
+rms: -0.000151047797632854
+cuts: 1572, 2500
+
+xl,xh: -0.00124, 0.00116
+Orientation: 2
+rms: -0.00016326911092761666
+cuts: 1572, 1500
+
+xl,xh: -0.00133, 0.00128
+Orientation: 3
+rms: -0.00010174274513077581
+cuts: 2500, 1500
+
+xl,xh: -0.00140, 0.00131
+Orientation: 4
+rms: -0.00016531910442507447
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -33.90, -799.52
+threshold: 0.00140
+
+     fun: -0.00016531910442507447
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([ -4.23795695, -99.93968655])
+
+----------
+itl: R20_S00
+xl,xh: -0.00077, 0.00073
+Orientation: 1
+rms: -7.38689515737974e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00073, 0.00074
+Orientation: 2
+rms: -8.310556555002359e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00074, 0.00075
+Orientation: 3
+rms: -4.644538717224823e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00081, 0.00076
+Orientation: 4
+rms: -0.0001537795460395928
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -176.23, -197.97
+threshold: 0.00081
+
+     fun: -0.0001537795460395928
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([-22.02878606, -24.74595435])
+
+----------
+itl: R20_S01
+xl,xh: -0.00072, 0.00067
+Orientation: 1
+rms: -8.059693486510891e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00067, 0.00067
+Orientation: 2
+rms: -0.00010064359531921945
+cuts: 1572, 1500
+
+xl,xh: -0.00076, 0.00080
+Orientation: 3
+rms: -8.183278826831158e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00078, 0.00078
+Orientation: 4
+rms: -9.123462306774893e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4853.44, 4110.41
+threshold: 0.00078
+
+     fun: -0.00010064359531921945
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([606.67951517, 513.80152676])
+
+----------
+itl: R20_S02
+xl,xh: -0.00201, 0.00198
+Orientation: 1
+rms: -0.00023451530559149677
+cuts: 1572, 2500
+
+xl,xh: -0.00201, 0.00198
+Orientation: 2
+rms: -9.148942318708854e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00216, 0.00211
+Orientation: 3
+rms: -0.00015624665564235984
+cuts: 2500, 1500
+
+xl,xh: -0.00213, 0.00209
+Orientation: 4
+rms: -0.00029434809443154477
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -501.05, -39.31
+threshold: 0.00213
+
+     fun: -0.00029434809443154477
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([-62.6315643 ,  -4.91422155])
+
+----------
+itl: R20_S21
+xl,xh: -0.00097, 0.00086
+Orientation: 1
+rms: -0.00010289250898388734
+cuts: 1572, 2500
+
+xl,xh: -0.00104, 0.00096
+Orientation: 2
+rms: -0.00017904047964812937
+cuts: 1572, 1500
+
+xl,xh: -0.00129, 0.00122
+Orientation: 3
+rms: -0.0002348705344097983
+cuts: 2500, 1500
+
+xl,xh: -0.00119, 0.00108
+Orientation: 4
+rms: -0.00013633570171425296
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -221.58, 4092.23
+threshold: 0.00119
+
+     fun: -0.0002348705344097983
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-27.69727622, 511.52911696])
+
+----------
+itl: R20_S22
+xl,xh: -0.00260, 0.00243
+Orientation: 1
+rms: -0.00036321763659297326
+cuts: 1572, 2500
+
+xl,xh: -0.00285, 0.00270
+Orientation: 2
+rms: -0.00014230533981303802
+cuts: 1572, 1500
+
+xl,xh: -0.00279, 0.00268
+Orientation: 3
+rms: -0.00015818492086514866
+cuts: 2500, 1500
+
+xl,xh: -0.00253, 0.00244
+Orientation: 4
+rms: -0.00041627976700942676
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -24.88, -426.02
+threshold: 0.00253
+
+     fun: -0.00041627976700942676
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([ -3.11033779, -53.25283476])
+
+----------
+itl: R20_S10
+xl,xh: -0.00077, 0.00075
+Orientation: 1
+rms: -9.712796890991231e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00074, 0.00076
+Orientation: 2
+rms: -8.416094133750444e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00074, 0.00078
+Orientation: 3
+rms: -8.381728239478708e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00076, 0.00076
+Orientation: 4
+rms: -0.00011114514227158348
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -44.98, -488.13
+threshold: 0.00076
+
+     fun: -0.00011114514227158348
+ message: 'Optimization terminated successfully.'
+    nfev: 273
+     nit: 2
+ success: True
+       x: array([ -5.62205434, -61.01600488])
+
+----------
+itl: R20_S11
+xl,xh: -0.00052, 0.00049
+Orientation: 1
+rms: -6.792367548591916e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00055, 0.00054
+Orientation: 2
+rms: -7.24109859013874e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00061, 0.00061
+Orientation: 3
+rms: -6.75832018627866e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00056, 0.00053
+Orientation: 4
+rms: -4.9289470478224517e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4253.86, 4242.11
+threshold: 0.00056
+
+     fun: -7.24109859013874e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([531.73229757, 530.26407356])
+
+----------
+itl: R20_S20
+xl,xh: -0.00110, 0.00108
+Orientation: 1
+rms: -0.0001514759046702765
+cuts: 1572, 2500
+
+xl,xh: -0.00095, 0.00098
+Orientation: 2
+rms: -0.0001271847762521838
+cuts: 1572, 1500
+
+xl,xh: -0.00100, 0.00105
+Orientation: 3
+rms: -0.00013792823326714946
+cuts: 2500, 1500
+
+xl,xh: -0.00115, 0.00114
+Orientation: 4
+rms: -0.00012283694562025392
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4271.16, -210.40
+threshold: 0.00115
+
+     fun: -0.0001514759046702765
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([533.89473325, -26.3004351 ])
+
+-> done wiht all sensors in this raft
+
+starting raft: 12/22 
+
+RTM-015 12002
+----------
+e2v: R32_S12
+xl,xh: -0.00158, 0.00149
+Orientation: 1
+rms: -0.00021158631936510597
+cuts: 1596, 2500
+
+xl,xh: -0.00153, 0.00146
+Orientation: 2
+rms: -0.00011477202020108358
+cuts: 1596, 1504
+
+xl,xh: -0.00152, 0.00148
+Orientation: 3
+rms: -8.978765927433956e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00159, 0.00151
+Orientation: 4
+rms: -0.00010412170925691436
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4486.17, -440.85
+threshold: 0.00159
+
+     fun: -0.00021158631936510597
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([560.77119628, -55.10607516])
+
+----------
+e2v: R32_S00
+xl,xh: -0.00180, 0.00174
+Orientation: 1
+rms: -0.00020581168767944325
+cuts: 1596, 2500
+
+xl,xh: -0.00175, 0.00168
+Orientation: 2
+rms: -0.00011150506175864938
+cuts: 1596, 1504
+
+xl,xh: -0.00174, 0.00166
+Orientation: 3
+rms: -0.00017657173081420967
+cuts: 2500, 1504
+
+xl,xh: -0.00180, 0.00172
+Orientation: 4
+rms: -0.0001130479598854106
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4248.68, -24.74
+threshold: 0.00180
+
+     fun: -0.00020581168767944325
+ message: 'Optimization terminated successfully.'
+    nfev: 1623
+     nit: 17
+ success: True
+       x: array([531.08461396,  -3.09307154])
+
+----------
+e2v: R32_S01
+xl,xh: -0.00154, 0.00151
+Orientation: 1
+rms: -0.00010211310327211448
+cuts: 1596, 2500
+
+xl,xh: -0.00153, 0.00148
+Orientation: 2
+rms: -7.858653465982082e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00158, 0.00157
+Orientation: 3
+rms: -0.00010701888598218491
+cuts: 2500, 1504
+
+xl,xh: -0.00159, 0.00158
+Orientation: 4
+rms: -0.00019462865995044184
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -356.67, -541.24
+threshold: 0.00159
+
+     fun: -0.00019462865995044184
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([-44.58356753, -67.65467727])
+
+----------
+e2v: R32_S02
+xl,xh: -0.00129, 0.00125
+Orientation: 1
+rms: -0.00014016382544746416
+cuts: 1596, 2500
+
+xl,xh: -0.00132, 0.00124
+Orientation: 2
+rms: -6.92504843008027e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00126, 0.00124
+Orientation: 3
+rms: -8.558859582595304e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00123, 0.00122
+Orientation: 4
+rms: -0.00014743852031667726
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -96.86, -786.14
+threshold: 0.00123
+
+     fun: -0.00014743852031667726
+ message: 'Optimization terminated successfully.'
+    nfev: 273
+     nit: 2
+ success: True
+       x: array([-12.1078416 , -98.26712734])
+
+----------
+e2v: R32_S21
+xl,xh: -0.00141, 0.00136
+Orientation: 1
+rms: -0.00018225432964060344
+cuts: 1596, 2500
+
+xl,xh: -0.00138, 0.00131
+Orientation: 2
+rms: -0.00011842525618976276
+cuts: 1596, 1504
+
+xl,xh: -0.00137, 0.00132
+Orientation: 3
+rms: -7.266565866491319e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00141, 0.00138
+Orientation: 4
+rms: -7.091800936634422e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4482.66, -546.14
+threshold: 0.00141
+
+     fun: -0.00018225432964060344
+ message: 'Optimization terminated successfully.'
+    nfev: 1263
+     nit: 13
+ success: True
+       x: array([560.33300042, -68.26730613])
+
+----------
+e2v: R32_S22
+xl,xh: -0.00177, 0.00167
+Orientation: 1
+rms: -0.0002349954024176325
+cuts: 1596, 2500
+
+xl,xh: -0.00175, 0.00162
+Orientation: 2
+rms: -0.00017969191875440271
+cuts: 1596, 1504
+
+xl,xh: -0.00172, 0.00162
+Orientation: 3
+rms: -0.00018677148658874168
+cuts: 2500, 1504
+
+xl,xh: -0.00176, 0.00167
+Orientation: 4
+rms: -0.00012780318772559726
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4209.06, -171.52
+threshold: 0.00176
+
+     fun: -0.0002349954024176325
+ message: 'Optimization terminated successfully.'
+    nfev: 1443
+     nit: 15
+ success: True
+       x: array([526.13291969, -21.43988037])
+
+----------
+e2v: R32_S10
+xl,xh: -0.00158, 0.00152
+Orientation: 1
+rms: -0.00016843618792518482
+cuts: 1596, 2500
+
+xl,xh: -0.00157, 0.00150
+Orientation: 2
+rms: -8.064847680996836e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00153, 0.00151
+Orientation: 3
+rms: -9.588219376045935e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00153, 0.00151
+Orientation: 4
+rms: -9.456082020768248e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4659.26, -543.06
+threshold: 0.00153
+
+     fun: -0.00016843618792518482
+ message: 'Optimization terminated successfully.'
+    nfev: 1533
+     nit: 16
+ success: True
+       x: array([582.40708324, -67.88267946])
+
+----------
+e2v: R32_S11
+xl,xh: -0.00105, 0.00100
+Orientation: 1
+rms: -0.0002175219738150791
+cuts: 1596, 2500
+
+xl,xh: -0.00104, 0.00096
+Orientation: 2
+rms: -9.137848799009026e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00105, 0.00098
+Orientation: 3
+rms: -5.0990012945136904e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00105, 0.00100
+Orientation: 4
+rms: -6.554775407451442e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4477.32, -612.95
+threshold: 0.00105
+
+     fun: -0.0002175219738150791
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([559.66530373, -76.61898317])
+
+----------
+e2v: R32_S20
+xl,xh: -0.00177, 0.00165
+Orientation: 1
+rms: -0.000211002233911297
+cuts: 1596, 2500
+
+xl,xh: -0.00175, 0.00162
+Orientation: 2
+rms: -0.0001381762876514098
+cuts: 1596, 1504
+
+xl,xh: -0.00176, 0.00164
+Orientation: 3
+rms: -0.0001456876227350306
+cuts: 2500, 1504
+
+xl,xh: -0.00177, 0.00166
+Orientation: 4
+rms: -0.00010566747108184204
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4702.02, -608.12
+threshold: 0.00177
+
+     fun: -0.000211002233911297
+ message: 'Optimization terminated successfully.'
+    nfev: 1713
+     nit: 18
+ success: True
+       x: array([587.75193806, -76.01490095])
+
+-> done wiht all sensors in this raft
+
+starting raft: 13/22 
+
+RTM-016 12027
+----------
+e2v: R24_S12
+xl,xh: -0.00181, 0.00171
+Orientation: 1
+rms: -0.00027909764027954966
+cuts: 1596, 2500
+
+xl,xh: -0.00175, 0.00167
+Orientation: 2
+rms: -0.00023119889745790604
+cuts: 1596, 1504
+
+xl,xh: -0.00171, 0.00164
+Orientation: 3
+rms: -0.00010806359186643042
+cuts: 2500, 1504
+
+xl,xh: -0.00177, 0.00168
+Orientation: 4
+rms: -0.00013887954914667712
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4381.25, -499.05
+threshold: 0.00177
+
+     fun: -0.00027909764027954966
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([547.65615469, -62.38145593])
+
+----------
+e2v: R24_S00
+xl,xh: -0.00168, 0.00162
+Orientation: 1
+rms: -0.00018197919528135023
+cuts: 1596, 2500
+
+xl,xh: -0.00167, 0.00159
+Orientation: 2
+rms: -0.00019586561814499573
+cuts: 1596, 1504
+
+xl,xh: -0.00159, 0.00156
+Orientation: 3
+rms: -0.00010174863685761924
+cuts: 2500, 1504
+
+xl,xh: -0.00158, 0.00158
+Orientation: 4
+rms: -0.00011178751816193657
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4566.48, 4390.69
+threshold: 0.00158
+
+     fun: -0.00019586561814499573
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([570.81031055, 548.83673068])
+
+----------
+e2v: R24_S01
+xl,xh: -0.00161, 0.00155
+Orientation: 1
+rms: -0.00016318594464873274
+cuts: 1596, 2500
+
+xl,xh: -0.00154, 0.00146
+Orientation: 2
+rms: -8.092726683177267e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00156, 0.00150
+Orientation: 3
+rms: -7.77166622903703e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00164, 0.00161
+Orientation: 4
+rms: -0.0002645852007585075
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -564.28, -643.01
+threshold: 0.00164
+
+     fun: -0.0002645852007585075
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-70.53471476, -80.37667341])
+
+----------
+e2v: R24_S02
+xl,xh: -0.00143, 0.00138
+Orientation: 1
+rms: -0.00013956763938866287
+cuts: 1596, 2500
+
+xl,xh: -0.00141, 0.00133
+Orientation: 2
+rms: -8.357051308353974e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00136, 0.00130
+Orientation: 3
+rms: -6.075485121115259e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00142, 0.00139
+Orientation: 4
+rms: -0.00025002396928285655
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -594.06, -612.83
+threshold: 0.00142
+
+     fun: -0.00025002396928285655
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-74.25755195, -76.60355602])
+
+----------
+e2v: R24_S21
+xl,xh: -0.00196, 0.00187
+Orientation: 1
+rms: -0.00025349242135514724
+cuts: 1596, 2500
+
+xl,xh: -0.00192, 0.00182
+Orientation: 2
+rms: -0.000175148742674298
+cuts: 1596, 1504
+
+xl,xh: -0.00187, 0.00178
+Orientation: 3
+rms: -0.0002206800325342053
+cuts: 2500, 1504
+
+xl,xh: -0.00193, 0.00184
+Orientation: 4
+rms: -0.00017301741392030184
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4438.79, -594.28
+threshold: 0.00193
+
+     fun: -0.00025349242135514724
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([554.84836252, -74.28561614])
+
+----------
+e2v: R24_S22
+xl,xh: -0.00168, 0.00155
+Orientation: 1
+rms: -0.00017224396206409507
+cuts: 1596, 2500
+
+xl,xh: -0.00160, 0.00146
+Orientation: 2
+rms: -0.0001990435700354413
+cuts: 1596, 1504
+
+xl,xh: -0.00157, 0.00147
+Orientation: 3
+rms: -0.00013847394609799345
+cuts: 2500, 1504
+
+xl,xh: -0.00164, 0.00156
+Orientation: 4
+rms: -0.0003286245293635733
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -477.22, -567.66
+threshold: 0.00164
+
+     fun: -0.0003286245293635733
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([-59.65245283, -70.95744736])
+
+----------
+e2v: R24_S10
+xl,xh: -0.00174, 0.00166
+Orientation: 1
+rms: -0.00013144508943451735
+cuts: 1596, 2500
+
+xl,xh: -0.00163, 0.00154
+Orientation: 2
+rms: -9.52060808572454e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00163, 0.00155
+Orientation: 3
+rms: -9.459199989228548e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00175, 0.00169
+Orientation: 4
+rms: -0.00027292200926163246
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -510.28, -611.82
+threshold: 0.00175
+
+     fun: -0.00027292200926163246
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-63.78529904, -76.47795537])
+
+----------
+e2v: R24_S11
+xl,xh: -0.00210, 0.00202
+Orientation: 1
+rms: -0.0003218694853086784
+cuts: 1596, 2500
+
+xl,xh: -0.00201, 0.00193
+Orientation: 2
+rms: -0.0001402107949069944
+cuts: 1596, 1504
+
+xl,xh: -0.00194, 0.00188
+Orientation: 3
+rms: -9.916032391199779e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00202, 0.00194
+Orientation: 4
+rms: -0.0002391256944094982
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4474.63, -564.96
+threshold: 0.00202
+
+     fun: -0.0003218694853086784
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([559.32840379, -70.62048719])
+
+----------
+e2v: R24_S20
+xl,xh: -0.00192, 0.00182
+Orientation: 1
+rms: -0.00028891250218018535
+cuts: 1596, 2500
+
+xl,xh: -0.00190, 0.00180
+Orientation: 2
+rms: -0.00023272753991323034
+cuts: 1596, 1504
+
+xl,xh: -0.00187, 0.00178
+Orientation: 3
+rms: -0.00020817651426229333
+cuts: 2500, 1504
+
+xl,xh: -0.00187, 0.00179
+Orientation: 4
+rms: -0.00013190479598855853
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4398.03, -528.38
+threshold: 0.00187
+
+     fun: -0.00028891250218018535
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([549.7537902 , -66.04810956])
+
+-> done wiht all sensors in this raft
+
+starting raft: 14/22 
+
+RTM-017 11166
+----------
+itl: R03_S12
+xl,xh: -0.00095, 0.00082
+Orientation: 1
+rms: -0.00013098792407828524
+cuts: 1572, 2500
+
+xl,xh: -0.00097, 0.00088
+Orientation: 2
+rms: -0.00016779592487806388
+cuts: 1572, 1500
+
+xl,xh: -0.00134, 0.00121
+Orientation: 3
+rms: -0.0002003583671215977
+cuts: 2500, 1500
+
+xl,xh: -0.00130, 0.00116
+Orientation: 4
+rms: -0.00010933347723211126
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -9.76, 4131.04
+threshold: 0.00130
+
+     fun: -0.0002003583671215977
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([ -1.22043131, 516.37951728])
+
+----------
+itl: R03_S00
+xl,xh: -0.00186, 0.00179
+Orientation: 1
+rms: -0.00012152155892672572
+cuts: 1572, 2500
+
+xl,xh: -0.00165, 0.00159
+Orientation: 2
+rms: -0.0001339367797673216
+cuts: 1572, 1500
+
+xl,xh: -0.00195, 0.00189
+Orientation: 3
+rms: -0.00013280875623406744
+cuts: 2500, 1500
+
+xl,xh: -0.00206, 0.00199
+Orientation: 4
+rms: -0.00029458853799584024
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -27.59, -566.88
+threshold: 0.00206
+
+     fun: -0.00029458853799584024
+ message: 'Optimization terminated successfully.'
+    nfev: 453
+     nit: 4
+ success: True
+       x: array([ -3.44888044, -70.86046704])
+
+----------
+itl: R03_S01
+xl,xh: -0.00071, 0.00067
+Orientation: 1
+rms: -0.00017708023172737772
+cuts: 1572, 2500
+
+xl,xh: -0.00070, 0.00067
+Orientation: 2
+rms: -8.144817571564169e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00072, 0.00070
+Orientation: 3
+rms: -5.9312525893204476e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00072, 0.00069
+Orientation: 4
+rms: -7.136117306684694e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4189.88, -367.43
+threshold: 0.00072
+
+     fun: -0.00017708023172737772
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([523.73481228, -45.92910143])
+
+----------
+itl: R03_S02
+xl,xh: -0.00074, 0.00067
+Orientation: 1
+rms: -8.700875271423377e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00077, 0.00074
+Orientation: 2
+rms: -0.00017991041691761908
+cuts: 1572, 1500
+
+xl,xh: -0.00085, 0.00082
+Orientation: 3
+rms: -7.764259309902939e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00079, 0.00071
+Orientation: 4
+rms: -8.34432086471319e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4198.67, 4095.56
+threshold: 0.00079
+
+     fun: -0.00017991041691761908
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([524.83432726, 511.94555107])
+
+----------
+itl: R03_S21
+xl,xh: -0.00082, 0.00077
+Orientation: 1
+rms: -0.00017243207888908597
+cuts: 1572, 2500
+
+xl,xh: -0.00082, 0.00081
+Orientation: 2
+rms: -0.00010765274089799198
+cuts: 1572, 1500
+
+xl,xh: -0.00085, 0.00086
+Orientation: 3
+rms: -0.00012307819933909074
+cuts: 2500, 1500
+
+xl,xh: -0.00082, 0.00079
+Orientation: 4
+rms: -0.00011416050582738464
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4247.29, -352.36
+threshold: 0.00082
+
+     fun: -0.00017243207888908597
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([530.91173054, -44.0445433 ])
+
+----------
+itl: R03_S22
+xl,xh: -0.00070, 0.00066
+Orientation: 1
+rms: -6.54192580016538e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00068, 0.00065
+Orientation: 2
+rms: -0.00018063725715497373
+cuts: 1572, 1500
+
+xl,xh: -0.00070, 0.00067
+Orientation: 3
+rms: -6.0612768774322375e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00069, 0.00066
+Orientation: 4
+rms: -7.937950130732519e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4181.24, 4121.75
+threshold: 0.00069
+
+     fun: -0.00018063725715497373
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([522.65526492, 515.21926405])
+
+----------
+itl: R03_S10
+xl,xh: -0.00074, 0.00071
+Orientation: 1
+rms: -0.00018123821085692417
+cuts: 1572, 2500
+
+xl,xh: -0.00075, 0.00076
+Orientation: 2
+rms: -5.936560299720606e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00077, 0.00082
+Orientation: 3
+rms: -7.766164125480617e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00075, 0.00075
+Orientation: 4
+rms: -8.172233874757893e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4260.47, -460.35
+threshold: 0.00075
+
+     fun: -0.00018123821085692417
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([532.55936104, -57.54352729])
+
+----------
+itl: R03_S11
+xl,xh: -0.00095, 0.00091
+Orientation: 1
+rms: -0.00020294871301336696
+cuts: 1572, 2500
+
+xl,xh: -0.00093, 0.00090
+Orientation: 2
+rms: -6.331555121387546e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00125, 0.00125
+Orientation: 3
+rms: -0.0001119054095732634
+cuts: 2500, 1500
+
+xl,xh: -0.00122, 0.00119
+Orientation: 4
+rms: -0.00015422038731669897
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4190.39, -359.45
+threshold: 0.00122
+
+     fun: -0.00020294871301336696
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([523.79815481, -44.93156527])
+
+----------
+itl: R03_S20
+xl,xh: -0.00057, 0.00057
+Orientation: 1
+rms: -6.892473869746917e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00057, 0.00057
+Orientation: 2
+rms: -6.6553165054513e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00061, 0.00064
+Orientation: 3
+rms: -6.629365162413022e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00061, 0.00063
+Orientation: 4
+rms: -8.334559254842699e-05
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -180.44, -0.48
+threshold: 0.00063
+
+     fun: -8.334559254842699e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-22.55482751,  -0.0602929 ])
+
+-> done wiht all sensors in this raft
+
+starting raft: 15/22 
+
+RTM-018 12120
+----------
+itl: R42_S12
+xl,xh: -0.00057, 0.00057
+Orientation: 1
+rms: -6.634626650498618e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00071, 0.00073
+Orientation: 2
+rms: -7.695356869879561e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00070, 0.00070
+Orientation: 3
+rms: -7.359093038422981e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00057, 0.00055
+Orientation: 4
+rms: -6.334007573617396e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4115.41, 4771.74
+threshold: 0.00057
+
+     fun: -7.695356869879561e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 2163
+     nit: 23
+ success: True
+       x: array([514.42663482, 596.46796916])
+
+----------
+itl: R42_S00
+xl,xh: -0.00094, 0.00087
+Orientation: 1
+rms: -0.00011979793096123992
+cuts: 1572, 2500
+
+xl,xh: -0.00090, 0.00087
+Orientation: 2
+rms: -0.00010509220967942072
+cuts: 1572, 1500
+
+xl,xh: -0.00094, 0.00094
+Orientation: 3
+rms: -9.870940638738604e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00092, 0.00089
+Orientation: 4
+rms: -0.00013254380858058516
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -190.35, -143.83
+threshold: 0.00092
+
+     fun: -0.00013254380858058516
+ message: 'Optimization terminated successfully.'
+    nfev: 1713
+     nit: 18
+ success: True
+       x: array([-23.79345155, -17.97913955])
+
+----------
+itl: R42_S01
+xl,xh: -0.00045, 0.00045
+Orientation: 1
+rms: -5.60536630763826e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00051, 0.00053
+Orientation: 2
+rms: -5.769108116516092e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00056, 0.00062
+Orientation: 3
+rms: -8.195553064103958e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00047, 0.00050
+Orientation: 4
+rms: -7.813639718973069e-05
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -765.59, 4053.65
+threshold: 0.00050
+
+     fun: -8.195553064103958e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([-95.69900031, 506.70570749])
+
+----------
+itl: R42_S02
+xl,xh: -0.00251, 0.00250
+Orientation: 1
+rms: -0.0002928191547794433
+cuts: 1572, 2500
+
+xl,xh: -0.00230, 0.00227
+Orientation: 2
+rms: -0.00015064474746224655
+cuts: 1572, 1500
+
+xl,xh: -0.00227, 0.00228
+Orientation: 3
+rms: -0.00014633923704562808
+cuts: 2500, 1500
+
+xl,xh: -0.00236, 0.00237
+Orientation: 4
+rms: -0.0002888799319311782
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4634.10, -589.24
+threshold: 0.00237
+
+     fun: -0.0002928191547794433
+ message: 'Optimization terminated successfully.'
+    nfev: 363
+     nit: 3
+ success: True
+       x: array([579.26204241, -73.65523863])
+
+----------
+itl: R42_S21
+xl,xh: -0.00147, 0.00134
+Orientation: 1
+rms: -0.0001830766902695519
+cuts: 1572, 2500
+
+xl,xh: -0.00137, 0.00134
+Orientation: 2
+rms: -0.0002039270091571953
+cuts: 1572, 1500
+
+xl,xh: -0.00158, 0.00161
+Orientation: 3
+rms: -0.00024423104186117395
+cuts: 2500, 1500
+
+xl,xh: -0.00159, 0.00155
+Orientation: 4
+rms: -0.00021455034311349076
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -739.84, 4016.52
+threshold: 0.00159
+
+     fun: -0.00024423104186117395
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-92.47983189, 502.06522194])
+
+----------
+itl: R42_S22
+xl,xh: -0.00049, 0.00045
+Orientation: 1
+rms: -5.1108419918101355e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00049, 0.00047
+Orientation: 2
+rms: -5.376150089934501e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00053, 0.00049
+Orientation: 3
+rms: -5.992065915930247e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00051, 0.00047
+Orientation: 4
+rms: -6.429401586272203e-05
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -120.71, -136.10
+threshold: 0.00051
+
+     fun: -6.429401586272203e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-15.08817148, -17.0119386 ])
+
+----------
+itl: R42_S10
+xl,xh: -0.00107, 0.00102
+Orientation: 1
+rms: -0.00013158715684335993
+cuts: 1572, 2500
+
+xl,xh: -0.00104, 0.00102
+Orientation: 2
+rms: -7.678530274216482e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00121, 0.00119
+Orientation: 3
+rms: -0.0001294451777510508
+cuts: 2500, 1500
+
+xl,xh: -0.00118, 0.00114
+Orientation: 4
+rms: -0.000151253999342929
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -731.63, -29.87
+threshold: 0.00118
+
+     fun: -0.000151253999342929
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-91.45335059,  -3.73384164])
+
+----------
+itl: R42_S11
+xl,xh: -0.00054, 0.00056
+Orientation: 1
+rms: -6.900217934829472e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00054, 0.00058
+Orientation: 2
+rms: -5.7853519618490925e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00055, 0.00062
+Orientation: 3
+rms: -7.405717820829967e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00055, 0.00060
+Orientation: 4
+rms: -8.551441193091744e-05
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -772.39, -6.05
+threshold: 0.00060
+
+     fun: -8.551441193091744e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([-96.54831837,  -0.75617707])
+
+----------
+itl: R42_S20
+xl,xh: -0.00081, 0.00079
+Orientation: 1
+rms: -8.880507193916383e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00079, 0.00078
+Orientation: 2
+rms: -7.813884609587667e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00088, 0.00088
+Orientation: 3
+rms: -0.00019278479851354426
+cuts: 2500, 1500
+
+xl,xh: -0.00088, 0.00088
+Orientation: 4
+rms: -8.374427792604172e-05
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -289.56, 4152.41
+threshold: 0.00088
+
+     fun: -0.00019278479851354426
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-36.19538764, 519.05174941])
+
+-> done wiht all sensors in this raft
+
+starting raft: 16/22 
+
+RTM-019 11808
+----------
+e2v: R13_S12
+xl,xh: -0.00170, 0.00162
+Orientation: 1
+rms: -0.00018053515678189007
+cuts: 1596, 2500
+
+xl,xh: -0.00156, 0.00147
+Orientation: 2
+rms: -0.0001241480404703549
+cuts: 1596, 1504
+
+xl,xh: -0.00157, 0.00148
+Orientation: 3
+rms: -9.23103812728931e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00172, 0.00164
+Orientation: 4
+rms: -0.000300552752571803
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -484.28, -587.32
+threshold: 0.00172
+
+     fun: -0.000300552752571803
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-60.53513107, -73.4149626 ])
+
+----------
+e2v: R13_S00
+xl,xh: -0.00154, 0.00150
+Orientation: 1
+rms: -0.00012756618857110311
+cuts: 1596, 2500
+
+xl,xh: -0.00150, 0.00143
+Orientation: 2
+rms: -0.0002525243230880255
+cuts: 1596, 1504
+
+xl,xh: -0.00148, 0.00142
+Orientation: 3
+rms: -7.516290284904319e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00152, 0.00148
+Orientation: 4
+rms: -0.00010625872912089015
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4481.82, 4415.23
+threshold: 0.00152
+
+     fun: -0.0002525243230880255
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([560.22737931, 551.90399992])
+
+----------
+e2v: R13_S01
+xl,xh: -0.00133, 0.00129
+Orientation: 1
+rms: -0.0001693863727405699
+cuts: 1596, 2500
+
+xl,xh: -0.00127, 0.00122
+Orientation: 2
+rms: -0.00011133688357070238
+cuts: 1596, 1504
+
+xl,xh: -0.00129, 0.00125
+Orientation: 3
+rms: -7.00607962535241e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00135, 0.00133
+Orientation: 4
+rms: -0.00020691143674198375
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -412.36, -646.10
+threshold: 0.00135
+
+     fun: -0.00020691143674198375
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-51.54477033, -80.76268028])
+
+----------
+e2v: R13_S02
+xl,xh: -0.00134, 0.00129
+Orientation: 1
+rms: -0.00015548305840138227
+cuts: 1596, 2500
+
+xl,xh: -0.00130, 0.00124
+Orientation: 2
+rms: -8.861701969931231e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00134, 0.00128
+Orientation: 3
+rms: -9.964177497834309e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00139, 0.00134
+Orientation: 4
+rms: -0.00017080810371892228
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -485.41, -704.01
+threshold: 0.00139
+
+     fun: -0.00017080810371892228
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-60.6768191 , -88.00168687])
+
+----------
+e2v: R13_S21
+xl,xh: -0.00145, 0.00137
+Orientation: 1
+rms: -0.00027650043316673496
+cuts: 1596, 2500
+
+xl,xh: -0.00141, 0.00131
+Orientation: 2
+rms: -0.0001242183158533494
+cuts: 1596, 1504
+
+xl,xh: -0.00138, 0.00131
+Orientation: 3
+rms: -0.00012075549154412843
+cuts: 2500, 1504
+
+xl,xh: -0.00144, 0.00137
+Orientation: 4
+rms: -9.7347701704433e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4494.40, -640.73
+threshold: 0.00144
+
+     fun: -0.00027650043316673496
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([561.79971716, -80.09174487])
+
+----------
+e2v: R13_S22
+xl,xh: -0.00141, 0.00135
+Orientation: 1
+rms: -0.00014047692446169378
+cuts: 1596, 2500
+
+xl,xh: -0.00138, 0.00131
+Orientation: 2
+rms: -0.00016974479478319918
+cuts: 1596, 1504
+
+xl,xh: -0.00140, 0.00131
+Orientation: 3
+rms: -0.00012294717798020925
+cuts: 2500, 1504
+
+xl,xh: -0.00144, 0.00137
+Orientation: 4
+rms: -0.00010072908496306618
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4126.01, 4160.43
+threshold: 0.00144
+
+     fun: -0.00016974479478319918
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([515.75112744, 520.05402518])
+
+----------
+e2v: R13_S10
+xl,xh: -0.00125, 0.00120
+Orientation: 1
+rms: -0.00019750196377759947
+cuts: 1596, 2500
+
+xl,xh: -0.00124, 0.00119
+Orientation: 2
+rms: -8.57544480334588e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00125, 0.00121
+Orientation: 3
+rms: -9.452481751568483e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00127, 0.00122
+Orientation: 4
+rms: -7.33463263211249e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4662.93, -651.44
+threshold: 0.00127
+
+     fun: -0.00019750196377759947
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([582.86598167, -81.43047627])
+
+----------
+e2v: R13_S11
+xl,xh: -0.00172, 0.00166
+Orientation: 1
+rms: -0.00023124405427717246
+cuts: 1596, 2500
+
+xl,xh: -0.00167, 0.00161
+Orientation: 2
+rms: -0.00012517372512577368
+cuts: 1596, 1504
+
+xl,xh: -0.00165, 0.00159
+Orientation: 3
+rms: -0.00013386189147145065
+cuts: 2500, 1504
+
+xl,xh: -0.00168, 0.00161
+Orientation: 4
+rms: -0.00014182932192310002
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4583.26, -571.11
+threshold: 0.00168
+
+     fun: -0.00023124405427717246
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([572.90731012, -71.38881734])
+
+----------
+e2v: R13_S20
+xl,xh: -0.00200, 0.00190
+Orientation: 1
+rms: -0.0002676408097045419
+cuts: 1596, 2500
+
+xl,xh: -0.00199, 0.00186
+Orientation: 2
+rms: -0.0001872485070676289
+cuts: 1596, 1504
+
+xl,xh: -0.00195, 0.00185
+Orientation: 3
+rms: -0.00011761739337302297
+cuts: 2500, 1504
+
+xl,xh: -0.00199, 0.00189
+Orientation: 4
+rms: -0.0001921364147761131
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4549.82, -660.04
+threshold: 0.00199
+
+     fun: -0.0002676408097045419
+ message: 'Optimization terminated successfully.'
+    nfev: 1263
+     nit: 13
+ success: True
+       x: array([568.72795448, -82.50463166])
+
+-> done wiht all sensors in this raft
+
+starting raft: 17/22 
+
+RTM-020 10669
+----------
+e2v: R11_S12
+xl,xh: -0.00128, 0.00120
+Orientation: 1
+rms: -0.00012975937413631954
+cuts: 1596, 2500
+
+xl,xh: -0.00123, 0.00116
+Orientation: 2
+rms: -0.00015280596207192267
+cuts: 1596, 1504
+
+xl,xh: -0.00123, 0.00117
+Orientation: 3
+rms: -0.00010947559264947335
+cuts: 2500, 1504
+
+xl,xh: -0.00127, 0.00120
+Orientation: 4
+rms: -9.688374326165216e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4332.87, 4415.67
+threshold: 0.00127
+
+     fun: -0.00015280596207192267
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([541.60857829, 551.95912084])
+
+----------
+e2v: R11_S00
+xl,xh: -0.00160, 0.00156
+Orientation: 1
+rms: -0.00013944040850273528
+cuts: 1596, 2500
+
+xl,xh: -0.00153, 0.00146
+Orientation: 2
+rms: -0.0002949493360558299
+cuts: 1596, 1504
+
+xl,xh: -0.00147, 0.00143
+Orientation: 3
+rms: -0.00010721243051852567
+cuts: 2500, 1504
+
+xl,xh: -0.00153, 0.00149
+Orientation: 4
+rms: -0.00010510669899983269
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4438.67, 4418.38
+threshold: 0.00153
+
+     fun: -0.0002949493360558299
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([554.83358434, 552.29731539])
+
+----------
+e2v: R11_S01
+xl,xh: -0.00169, 0.00164
+Orientation: 1
+rms: -0.00017599321314730983
+cuts: 1596, 2500
+
+xl,xh: -0.00162, 0.00153
+Orientation: 2
+rms: -9.983249498395464e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00164, 0.00156
+Orientation: 3
+rms: -0.0001980119367145257
+cuts: 2500, 1504
+
+xl,xh: -0.00171, 0.00168
+Orientation: 4
+rms: -0.0003160503160498533
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -597.70, -629.34
+threshold: 0.00171
+
+     fun: -0.0003160503160498533
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-74.71299098, -78.66763944])
+
+----------
+e2v: R11_S02
+xl,xh: -0.00163, 0.00155
+Orientation: 1
+rms: -0.00017494656333234514
+cuts: 1596, 2500
+
+xl,xh: -0.00158, 0.00150
+Orientation: 2
+rms: -0.00015466187075872711
+cuts: 1596, 1504
+
+xl,xh: -0.00158, 0.00151
+Orientation: 3
+rms: -0.00014136165475208898
+cuts: 2500, 1504
+
+xl,xh: -0.00166, 0.00157
+Orientation: 4
+rms: -0.00010732733174935036
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4115.48, -423.69
+threshold: 0.00166
+
+     fun: -0.00017494656333234514
+ message: 'Optimization terminated successfully.'
+    nfev: 363
+     nit: 3
+ success: True
+       x: array([514.4352675 , -52.96160614])
+
+----------
+e2v: R11_S21
+xl,xh: -0.00132, 0.00125
+Orientation: 1
+rms: -0.0001808442598940024
+cuts: 1596, 2500
+
+xl,xh: -0.00128, 0.00120
+Orientation: 2
+rms: -0.00018711118158437322
+cuts: 1596, 1504
+
+xl,xh: -0.00130, 0.00122
+Orientation: 3
+rms: -0.00011188501720686079
+cuts: 2500, 1504
+
+xl,xh: -0.00137, 0.00129
+Orientation: 4
+rms: -8.001663628321846e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4098.21, 4726.26
+threshold: 0.00137
+
+     fun: -0.00018711118158437322
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([512.27594323, 590.78239902])
+
+----------
+e2v: R11_S22
+xl,xh: -0.00108, 0.00101
+Orientation: 1
+rms: -0.00013557377568268459
+cuts: 1596, 2500
+
+xl,xh: -0.00109, 0.00101
+Orientation: 2
+rms: -0.00015169561752747114
+cuts: 1596, 1504
+
+xl,xh: -0.00110, 0.00104
+Orientation: 3
+rms: -8.338281208115498e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00108, 0.00103
+Orientation: 4
+rms: -0.00014105644273894384
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4282.99, 4053.42
+threshold: 0.00108
+
+     fun: -0.00015169561752747114
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([535.3731299 , 506.67767395])
+
+----------
+e2v: R11_S10
+xl,xh: -0.00135, 0.00128
+Orientation: 1
+rms: -9.08969963555258e-05
+cuts: 1596, 2500
+
+xl,xh: -0.00139, 0.00135
+Orientation: 2
+rms: -0.00011573641004492302
+cuts: 1596, 1504
+
+xl,xh: -0.00146, 0.00144
+Orientation: 3
+rms: -0.00012228811839915424
+cuts: 2500, 1504
+
+xl,xh: -0.00138, 0.00133
+Orientation: 4
+rms: -0.00014640871468471478
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -126.71, -209.96
+threshold: 0.00138
+
+     fun: -0.00014640871468471478
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([-15.83929767, -26.2445462 ])
+
+----------
+e2v: R11_S11
+xl,xh: -0.00135, 0.00127
+Orientation: 1
+rms: -0.0001633008617153501
+cuts: 1596, 2500
+
+xl,xh: -0.00132, 0.00125
+Orientation: 2
+rms: -0.00012830546112473578
+cuts: 1596, 1504
+
+xl,xh: -0.00129, 0.00123
+Orientation: 3
+rms: -9.898097796825022e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00132, 0.00125
+Orientation: 4
+rms: -7.958562413978885e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4098.34, -24.78
+threshold: 0.00132
+
+     fun: -0.0001633008617153501
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([512.29246045,  -3.09741588])
+
+----------
+e2v: R11_S20
+xl,xh: -0.00136, 0.00129
+Orientation: 1
+rms: -9.815042683085339e-05
+cuts: 1596, 2500
+
+xl,xh: -0.00135, 0.00125
+Orientation: 2
+rms: -0.00014193676501705256
+cuts: 1596, 1504
+
+xl,xh: -0.00142, 0.00133
+Orientation: 3
+rms: -0.00015478747960137785
+cuts: 2500, 1504
+
+xl,xh: -0.00143, 0.00137
+Orientation: 4
+rms: -0.00018940808362336522
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -365.60, -605.64
+threshold: 0.00143
+
+     fun: -0.00018940808362336522
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-45.69993606, -75.70494994])
+
+-> done wiht all sensors in this raft
+
+starting raft: 18/22 
+
+RTM-021 12086
+----------
+itl: R41_S12
+xl,xh: -0.00285, 0.00269
+Orientation: 1
+rms: -0.00030395217200720077
+cuts: 1572, 2500
+
+xl,xh: -0.00307, 0.00294
+Orientation: 2
+rms: -0.00021160052614270644
+cuts: 1572, 1500
+
+xl,xh: -0.00325, 0.00315
+Orientation: 3
+rms: -0.00032688081445120406
+cuts: 2500, 1500
+
+xl,xh: -0.00287, 0.00273
+Orientation: 4
+rms: -0.0003173593257683442
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -28.60, 4474.35
+threshold: 0.00287
+
+     fun: -0.00032688081445120406
+ message: 'Optimization terminated successfully.'
+    nfev: 2343
+     nit: 25
+ success: True
+       x: array([ -3.57515968, 559.29335387])
+
+----------
+itl: R41_S00
+xl,xh: -0.00074, 0.00073
+Orientation: 1
+rms: -7.408111095639554e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00072, 0.00070
+Orientation: 2
+rms: -7.613554311688629e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00072, 0.00071
+Orientation: 3
+rms: -9.040582136041459e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00069, 0.00070
+Orientation: 4
+rms: -7.195491455217853e-05
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -254.16, 4532.51
+threshold: 0.00070
+
+     fun: -9.040582136041459e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-31.76959849, 566.56340418])
+
+----------
+itl: R41_S01
+xl,xh: -0.00059, 0.00058
+Orientation: 1
+rms: -5.044066633292687e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00058, 0.00057
+Orientation: 2
+rms: -7.237274712104704e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00067, 0.00068
+Orientation: 3
+rms: -7.446921913083626e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00070, 0.00069
+Orientation: 4
+rms: -9.340790128410637e-05
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -274.56, -380.58
+threshold: 0.00070
+
+     fun: -9.340790128410637e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([-34.31987767, -47.57293246])
+
+----------
+itl: R41_S02
+xl,xh: -0.00307, 0.00300
+Orientation: 1
+rms: -0.0003208357005912635
+cuts: 1572, 2500
+
+xl,xh: -0.00312, 0.00301
+Orientation: 2
+rms: -0.00036274176207094354
+cuts: 1572, 1500
+
+xl,xh: -0.00307, 0.00300
+Orientation: 3
+rms: -0.00029842247328094656
+cuts: 2500, 1500
+
+xl,xh: -0.00294, 0.00286
+Orientation: 4
+rms: -0.0002875400069092243
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4846.37, 4088.94
+threshold: 0.00294
+
+     fun: -0.00036274176207094354
+ message: 'Optimization terminated successfully.'
+    nfev: 453
+     nit: 4
+ success: True
+       x: array([605.79683204, 511.11796819])
+
+----------
+itl: R41_S21
+xl,xh: -0.00239, 0.00235
+Orientation: 1
+rms: -0.00023872253076917115
+cuts: 1572, 2500
+
+xl,xh: -0.00221, 0.00215
+Orientation: 2
+rms: -0.00014680614423356121
+cuts: 1572, 1500
+
+xl,xh: -0.00232, 0.00224
+Orientation: 3
+rms: -0.00020568934952298274
+cuts: 2500, 1500
+
+xl,xh: -0.00248, 0.00236
+Orientation: 4
+rms: -0.00021332275051890316
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4134.13, -559.85
+threshold: 0.00248
+
+     fun: -0.00023872253076917115
+ message: 'Optimization terminated successfully.'
+    nfev: 1353
+     nit: 14
+ success: True
+       x: array([516.76684673, -69.98186693])
+
+----------
+itl: R41_S22
+xl,xh: -0.00133, 0.00122
+Orientation: 1
+rms: -0.0002033433451609546
+cuts: 1572, 2500
+
+xl,xh: -0.00137, 0.00126
+Orientation: 2
+rms: -0.00011526865288381078
+cuts: 1572, 1500
+
+xl,xh: -0.00171, 0.00166
+Orientation: 3
+rms: -0.00013566874780773696
+cuts: 2500, 1500
+
+xl,xh: -0.00171, 0.00164
+Orientation: 4
+rms: -0.00027950803628626813
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -12.84, -759.57
+threshold: 0.00171
+
+     fun: -0.00027950803628626813
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([ -1.60548885, -94.94648027])
+
+----------
+itl: R41_S10
+xl,xh: -0.00075, 0.00074
+Orientation: 1
+rms: -0.00011309587643306031
+cuts: 1572, 2500
+
+xl,xh: -0.00078, 0.00080
+Orientation: 2
+rms: -9.038190093398296e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00082, 0.00086
+Orientation: 3
+rms: -8.415395828104363e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00079, 0.00080
+Orientation: 4
+rms: -0.0001026363226659922
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4081.76, -790.04
+threshold: 0.00080
+
+     fun: -0.00011309587643306031
+ message: 'Optimization terminated successfully.'
+    nfev: 1173
+     nit: 12
+ success: True
+       x: array([510.22033496, -98.75459387])
+
+----------
+itl: R41_S11
+xl,xh: -0.00057, 0.00055
+Orientation: 1
+rms: -6.342057550215238e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00060, 0.00061
+Orientation: 2
+rms: -0.00016937728278049934
+cuts: 1572, 1500
+
+xl,xh: -0.00060, 0.00062
+Orientation: 3
+rms: -6.243595351955703e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00054, 0.00052
+Orientation: 4
+rms: -6.844233913262467e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4253.80, 4151.11
+threshold: 0.00054
+
+     fun: -0.00016937728278049934
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([531.72444247, 518.88919027])
+
+----------
+itl: R41_S20
+xl,xh: -0.00060, 0.00056
+Orientation: 1
+rms: -8.953521568358745e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00060, 0.00059
+Orientation: 2
+rms: -5.08556432623632e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00058, 0.00059
+Orientation: 3
+rms: -5.7892255039020556e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00056, 0.00055
+Orientation: 4
+rms: -6.916931635872986e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4853.30, -108.29
+threshold: 0.00056
+
+     fun: -8.953521568358745e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([606.66288822, -13.53684368])
+
+-> done wiht all sensors in this raft
+
+starting raft: 19/22 
+
+RTM-022 11671
+----------
+itl: R43_S12
+xl,xh: -0.00045, 0.00045
+Orientation: 1
+rms: -4.916463240526586e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00050, 0.00049
+Orientation: 2
+rms: -4.210590557422235e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00051, 0.00051
+Orientation: 3
+rms: -5.687759345139165e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00047, 0.00047
+Orientation: 4
+rms: -4.987775136947803e-05
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -135.81, 4293.01
+threshold: 0.00047
+
+     fun: -5.687759345139165e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-16.97609288, 536.62664904])
+
+----------
+itl: R43_S00
+xl,xh: -0.00069, 0.00070
+Orientation: 1
+rms: -9.495137880513515e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00063, 0.00063
+Orientation: 2
+rms: -8.201377377957995e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00071, 0.00072
+Orientation: 3
+rms: -8.629584357948689e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00077, 0.00078
+Orientation: 4
+rms: -9.541417292857084e-05
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -78.47, -146.34
+threshold: 0.00078
+
+     fun: -9.541417292857084e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([ -9.80909827, -18.29204728])
+
+----------
+itl: R43_S01
+xl,xh: -0.00056, 0.00054
+Orientation: 1
+rms: -6.356144835105252e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00070, 0.00067
+Orientation: 2
+rms: -6.068539486819034e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00081, 0.00075
+Orientation: 3
+rms: -7.635236240684793e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00060, 0.00056
+Orientation: 4
+rms: -9.410621467155776e-05
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -163.02, -264.06
+threshold: 0.00060
+
+     fun: -9.410621467155776e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-20.37767343, -33.00771447])
+
+----------
+itl: R43_S02
+xl,xh: -0.00059, 0.00056
+Orientation: 1
+rms: -7.20014401283753e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00063, 0.00061
+Orientation: 2
+rms: -6.877197872062341e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00068, 0.00067
+Orientation: 3
+rms: -0.00017189877890357727
+cuts: 2500, 1500
+
+xl,xh: -0.00065, 0.00063
+Orientation: 4
+rms: -8.487274205999135e-05
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -271.79, 4123.44
+threshold: 0.00065
+
+     fun: -0.00017189877890357727
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([-33.97382108, 515.42954317])
+
+----------
+itl: R43_S21
+xl,xh: -0.00040, 0.00037
+Orientation: 1
+rms: -4.361485512084192e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00041, 0.00039
+Orientation: 2
+rms: -6.003538099904667e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00046, 0.00043
+Orientation: 3
+rms: -5.619281139788745e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00044, 0.00041
+Orientation: 4
+rms: -5.124487754584417e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4381.62, 4277.63
+threshold: 0.00044
+
+     fun: -6.003538099904667e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([547.70271964, 534.70384067])
+
+----------
+itl: R43_S22
+xl,xh: -0.00200, 0.00202
+Orientation: 1
+rms: -0.0002604780837883412
+cuts: 1572, 2500
+
+xl,xh: -0.00180, 0.00183
+Orientation: 2
+rms: -0.00018378665499743473
+cuts: 1572, 1500
+
+xl,xh: -0.00253, 0.00258
+Orientation: 3
+rms: -0.00041242671614033375
+cuts: 2500, 1500
+
+xl,xh: -0.00263, 0.00267
+Orientation: 4
+rms: -0.00030741314925409127
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -19.83, 4071.09
+threshold: 0.00267
+
+     fun: -0.00041242671614033375
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([ -2.4783481 , 508.88643617])
+
+----------
+itl: R43_S10
+xl,xh: -0.00125, 0.00120
+Orientation: 1
+rms: -9.031929483121345e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00109, 0.00104
+Orientation: 2
+rms: -9.988294997772835e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00128, 0.00123
+Orientation: 3
+rms: -7.968279967946056e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00144, 0.00139
+Orientation: 4
+rms: -0.0002226410568776714
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -205.88, -262.20
+threshold: 0.00144
+
+     fun: -0.0002226410568776714
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([-25.73512667, -32.77453253])
+
+----------
+itl: R43_S11
+xl,xh: -0.00078, 0.00071
+Orientation: 1
+rms: -9.792498342485938e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00082, 0.00078
+Orientation: 2
+rms: -0.00010223150930792971
+cuts: 1572, 1500
+
+xl,xh: -0.00122, 0.00116
+Orientation: 3
+rms: -0.00011721084489908202
+cuts: 2500, 1500
+
+xl,xh: -0.00113, 0.00106
+Orientation: 4
+rms: -0.00013019705747188237
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -42.05, -12.74
+threshold: 0.00113
+
+     fun: -0.00013019705747188237
+ message: 'Optimization terminated successfully.'
+    nfev: 183
+     nit: 1
+ success: True
+       x: array([-5.25679038, -1.59299615])
+
+----------
+itl: R43_S20
+xl,xh: -0.00240, 0.00221
+Orientation: 1
+rms: -0.00028328873724064297
+cuts: 1572, 2500
+
+xl,xh: -0.00233, 0.00209
+Orientation: 2
+rms: -0.00031551493891417165
+cuts: 1572, 1500
+
+xl,xh: -0.00302, 0.00292
+Orientation: 3
+rms: -0.00022830959607621703
+cuts: 2500, 1500
+
+xl,xh: -0.00338, 0.00325
+Orientation: 4
+rms: -0.0002624051134229911
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4836.07, 4023.97
+threshold: 0.00338
+
+     fun: -0.00031551493891417165
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([604.50937133, 502.99567195])
+
+-> done wiht all sensors in this raft
+
+starting raft: 20/22 
+
+RTM-023 10517
+----------
+itl: R10_S12
+xl,xh: -0.00161, 0.00157
+Orientation: 1
+rms: -0.000141492648596246
+cuts: 1572, 2500
+
+xl,xh: -0.00178, 0.00175
+Orientation: 2
+rms: -8.901381912451973e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00177, 0.00180
+Orientation: 3
+rms: -0.0003067824417354945
+cuts: 2500, 1500
+
+xl,xh: -0.00152, 0.00154
+Orientation: 4
+rms: -0.0002230555494648821
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -251.32, 4107.25
+threshold: 0.00154
+
+     fun: -0.0003067824417354945
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-31.41491468, 513.40657183])
+
+----------
+itl: R10_S00
+xl,xh: -0.00109, 0.00098
+Orientation: 1
+rms: -0.00012594926294204488
+cuts: 1572, 2500
+
+xl,xh: -0.00101, 0.00092
+Orientation: 2
+rms: -0.00013206972795490926
+cuts: 1572, 1500
+
+xl,xh: -0.00102, 0.00095
+Orientation: 3
+rms: -8.539876248394919e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00108, 0.00100
+Orientation: 4
+rms: -0.000157285844592853
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -101.71, -20.41
+threshold: 0.00108
+
+     fun: -0.000157285844592853
+ message: 'Optimization terminated successfully.'
+    nfev: 363
+     nit: 3
+ success: True
+       x: array([-12.7143206 ,  -2.55165555])
+
+----------
+itl: R10_S01
+xl,xh: -0.00083, 0.00082
+Orientation: 1
+rms: -0.0002230442891898218
+cuts: 1572, 2500
+
+xl,xh: -0.00082, 0.00080
+Orientation: 2
+rms: -6.295991401394708e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00083, 0.00085
+Orientation: 3
+rms: -9.427751549006199e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00083, 0.00085
+Orientation: 4
+rms: -9.338760606169309e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4253.34, -351.67
+threshold: 0.00085
+
+     fun: -0.0002230442891898218
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([531.66726297, -43.95934442])
+
+----------
+itl: R10_S02
+xl,xh: -0.00295, 0.00284
+Orientation: 1
+rms: -0.0002622059684563856
+cuts: 1572, 2500
+
+xl,xh: -0.00292, 0.00277
+Orientation: 2
+rms: -0.00024055153749471546
+cuts: 1572, 1500
+
+xl,xh: -0.00316, 0.00304
+Orientation: 3
+rms: -0.00038150129571162356
+cuts: 2500, 1500
+
+xl,xh: -0.00313, 0.00308
+Orientation: 4
+rms: -0.00032510447475596685
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -363.88, 4243.22
+threshold: 0.00313
+
+     fun: -0.00038150129571162356
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-45.48457891, 530.4020203 ])
+
+----------
+itl: R10_S21
+xl,xh: -0.00072, 0.00067
+Orientation: 1
+rms: -0.0001423446803227793
+cuts: 1572, 2500
+
+xl,xh: -0.00070, 0.00069
+Orientation: 2
+rms: -4.8816476442491235e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00073, 0.00075
+Orientation: 3
+rms: -8.143818806689343e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00075, 0.00073
+Orientation: 4
+rms: -5.6679226141922656e-05
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4220.69, -187.39
+threshold: 0.00075
+
+     fun: -0.0001423446803227793
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([527.58648816, -23.42316774])
+
+----------
+itl: R10_S22
+xl,xh: -0.00076, 0.00070
+Orientation: 1
+rms: -0.00021098415616204052
+cuts: 1572, 2500
+
+xl,xh: -0.00069, 0.00065
+Orientation: 2
+rms: -0.00011538731871943242
+cuts: 1572, 1500
+
+xl,xh: -0.00070, 0.00067
+Orientation: 3
+rms: -8.874188689659631e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00078, 0.00072
+Orientation: 4
+rms: -0.00010855728658736163
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4135.64, -335.11
+threshold: 0.00078
+
+     fun: -0.00021098415616204052
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([516.95523964, -41.8881422 ])
+
+----------
+itl: R10_S10
+xl,xh: -0.00347, 0.00337
+Orientation: 1
+rms: -0.0004967786885405144
+cuts: 1572, 2500
+
+xl,xh: -0.00363, 0.00362
+Orientation: 2
+rms: -0.00027668912455042736
+cuts: 1572, 1500
+
+xl,xh: -0.00355, 0.00365
+Orientation: 3
+rms: -0.00044751382114774504
+cuts: 2500, 1500
+
+xl,xh: -0.00327, 0.00332
+Orientation: 4
+rms: -0.00031539004567566234
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4464.04, -446.33
+threshold: 0.00332
+
+     fun: -0.0004967786885405144
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([558.00461259, -55.79144269])
+
+----------
+itl: R10_S11
+xl,xh: -0.00237, 0.00221
+Orientation: 1
+rms: -0.0002551136511138542
+cuts: 1572, 2500
+
+xl,xh: -0.00259, 0.00253
+Orientation: 2
+rms: -0.00033762109816833
+cuts: 1572, 1500
+
+xl,xh: -0.00256, 0.00257
+Orientation: 3
+rms: -0.00017983894641871313
+cuts: 2500, 1500
+
+xl,xh: -0.00243, 0.00236
+Orientation: 4
+rms: -0.00022524805030169802
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4133.21, 4349.13
+threshold: 0.00243
+
+     fun: -0.00033762109816833
+ message: 'Optimization terminated successfully.'
+    nfev: 273
+     nit: 2
+ success: True
+       x: array([516.65145501, 543.64159925])
+
+----------
+itl: R10_S20
+xl,xh: -0.00058, 0.00059
+Orientation: 1
+rms: -7.734711058914295e-05
+cuts: 1572, 2500
+
+xl,xh: -0.00059, 0.00059
+Orientation: 2
+rms: -8.460130847194101e-05
+cuts: 1572, 1500
+
+xl,xh: -0.00061, 0.00064
+Orientation: 3
+rms: -5.236425904421358e-05
+cuts: 2500, 1500
+
+xl,xh: -0.00062, 0.00065
+Orientation: 4
+rms: -9.205153652605834e-05
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -6.47, -798.62
+threshold: 0.00065
+
+     fun: -9.205153652605834e-05
+ message: 'Optimization terminated successfully.'
+    nfev: 543
+     nit: 5
+ success: True
+       x: array([ -0.80851509, -99.82734674])
+
+-> done wiht all sensors in this raft
+
+starting raft: 21/22 
+
+RTM-024 11351
+----------
+e2v: R22_S12
+xl,xh: -0.00094, 0.00087
+Orientation: 1
+rms: -0.00010557905425849796
+cuts: 1596, 2500
+
+xl,xh: -0.00095, 0.00089
+Orientation: 2
+rms: -8.395641331864738e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00096, 0.00092
+Orientation: 3
+rms: -0.00015986131511127498
+cuts: 2500, 1504
+
+xl,xh: -0.00095, 0.00091
+Orientation: 4
+rms: -0.00011122841655217505
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -409.73, 4440.50
+threshold: 0.00095
+
+     fun: -0.00015986131511127498
+ message: 'Optimization terminated successfully.'
+    nfev: 633
+     nit: 6
+ success: True
+       x: array([-51.21645044, 555.06242696])
+
+----------
+e2v: R22_S00
+xl,xh: -0.00128, 0.00124
+Orientation: 1
+rms: -0.0001737837269780662
+cuts: 1596, 2500
+
+xl,xh: -0.00125, 0.00119
+Orientation: 2
+rms: -9.557563275153074e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00126, 0.00121
+Orientation: 3
+rms: -6.075719060429609e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00127, 0.00125
+Orientation: 4
+rms: -0.00017171765582115167
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4106.32, -681.42
+threshold: 0.00127
+
+     fun: -0.0001737837269780662
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([513.28979712, -85.17800537])
+
+----------
+e2v: R22_S01
+xl,xh: -0.00109, 0.00106
+Orientation: 1
+rms: -0.00015550728264333697
+cuts: 1596, 2500
+
+xl,xh: -0.00109, 0.00105
+Orientation: 2
+rms: -7.929612395750182e-05
+cuts: 1596, 1504
+
+xl,xh: -0.00112, 0.00107
+Orientation: 3
+rms: -4.317356137084026e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00111, 0.00109
+Orientation: 4
+rms: -0.00011978982535310379
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4206.79, -482.27
+threshold: 0.00111
+
+     fun: -0.00015550728264333697
+ message: 'Optimization terminated successfully.'
+    nfev: 453
+     nit: 4
+ success: True
+       x: array([525.84892877, -60.2840615 ])
+
+----------
+e2v: R22_S02
+xl,xh: -0.00098, 0.00093
+Orientation: 1
+rms: -0.00015677420440080803
+cuts: 1596, 2500
+
+xl,xh: -0.00098, 0.00092
+Orientation: 2
+rms: -0.0001279888797719458
+cuts: 1596, 1504
+
+xl,xh: -0.00102, 0.00098
+Orientation: 3
+rms: -0.00016466007380973237
+cuts: 2500, 1504
+
+xl,xh: -0.00102, 0.00100
+Orientation: 4
+rms: -0.00011867172325730504
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -346.38, 4368.95
+threshold: 0.00102
+
+     fun: -0.00016466007380973237
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-43.29796613, 546.11870459])
+
+----------
+e2v: R22_S21
+xl,xh: -0.00126, 0.00119
+Orientation: 1
+rms: -0.00011527316847183919
+cuts: 1596, 2500
+
+xl,xh: -0.00116, 0.00108
+Orientation: 2
+rms: -0.00010859169168946164
+cuts: 1596, 1504
+
+xl,xh: -0.00126, 0.00118
+Orientation: 3
+rms: -8.242045781655027e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00139, 0.00132
+Orientation: 4
+rms: -0.00027171544623209875
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -549.13, -648.72
+threshold: 0.00139
+
+     fun: -0.00027171544623209875
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([-68.64178365, -81.08988245])
+
+----------
+e2v: R22_S22
+xl,xh: -0.00138, 0.00132
+Orientation: 1
+rms: -0.00018064524456118958
+cuts: 1596, 2500
+
+xl,xh: -0.00136, 0.00128
+Orientation: 2
+rms: -0.0001893945733786878
+cuts: 1596, 1504
+
+xl,xh: -0.00136, 0.00127
+Orientation: 3
+rms: -7.116668091016746e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00140, 0.00131
+Orientation: 4
+rms: -9.439751858468677e-05
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4107.23, 4799.79
+threshold: 0.00140
+
+     fun: -0.0001893945733786878
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([513.40382744, 599.97326994])
+
+----------
+e2v: R22_S10
+xl,xh: -0.00149, 0.00141
+Orientation: 1
+rms: -0.00020911040282653914
+cuts: 1596, 2500
+
+xl,xh: -0.00143, 0.00136
+Orientation: 2
+rms: -0.00011089296717066949
+cuts: 1596, 1504
+
+xl,xh: -0.00141, 0.00137
+Orientation: 3
+rms: -0.0001255764108151295
+cuts: 2500, 1504
+
+xl,xh: -0.00147, 0.00140
+Orientation: 4
+rms: -0.00010171910438741853
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4469.51, -595.77
+threshold: 0.00147
+
+     fun: -0.00020911040282653914
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([558.68857319, -74.47083449])
+
+----------
+e2v: R22_S11
+xl,xh: -0.00161, 0.00154
+Orientation: 1
+rms: -0.0002155464183904118
+cuts: 1596, 2500
+
+xl,xh: -0.00155, 0.00150
+Orientation: 2
+rms: -0.00010698537821016317
+cuts: 1596, 1504
+
+xl,xh: -0.00154, 0.00150
+Orientation: 3
+rms: -9.233956171560003e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00160, 0.00152
+Orientation: 4
+rms: -0.0001052774406370738
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4498.11, -513.58
+threshold: 0.00160
+
+     fun: -0.0002155464183904118
+ message: 'Optimization terminated successfully.'
+    nfev: 813
+     nit: 8
+ success: True
+       x: array([562.26381675, -64.19690116])
+
+----------
+e2v: R22_S20
+xl,xh: -0.00133, 0.00127
+Orientation: 1
+rms: -0.00013424409016148044
+cuts: 1596, 2500
+
+xl,xh: -0.00132, 0.00126
+Orientation: 2
+rms: -0.00017383603010418268
+cuts: 1596, 1504
+
+xl,xh: -0.00134, 0.00128
+Orientation: 3
+rms: -0.000104398563972797
+cuts: 2500, 1504
+
+xl,xh: -0.00135, 0.00129
+Orientation: 4
+rms: -0.00010397773432424727
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4173.20, 4757.06
+threshold: 0.00135
+
+     fun: -0.00017383603010418268
+ message: 'Optimization terminated successfully.'
+    nfev: 903
+     nit: 9
+ success: True
+       x: array([521.64986996, 594.63244273])
+
+-> done wiht all sensors in this raft
+
+starting raft: 22/22 
+
+RTM-025 10722
+----------
+e2v: R21_S12
+xl,xh: -0.00147, 0.00143
+Orientation: 1
+rms: -0.00020034886327314385
+cuts: 1596, 2500
+
+xl,xh: -0.00147, 0.00139
+Orientation: 2
+rms: -0.00013063398601217914
+cuts: 1596, 1504
+
+xl,xh: -0.00149, 0.00141
+Orientation: 3
+rms: -0.00017679192579174734
+cuts: 2500, 1504
+
+xl,xh: -0.00148, 0.00144
+Orientation: 4
+rms: -0.00011767140980494769
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4182.99, -130.78
+threshold: 0.00148
+
+     fun: -0.00020034886327314385
+ message: 'Optimization terminated successfully.'
+    nfev: 273
+     nit: 2
+ success: True
+       x: array([522.87327644, -16.34787684])
+
+----------
+e2v: R21_S00
+xl,xh: -0.00182, 0.00179
+Orientation: 1
+rms: -0.00018605526306951994
+cuts: 1596, 2500
+
+xl,xh: -0.00177, 0.00170
+Orientation: 2
+rms: -0.00017198400349713108
+cuts: 1596, 1504
+
+xl,xh: -0.00169, 0.00164
+Orientation: 3
+rms: -0.00016616341348516035
+cuts: 2500, 1504
+
+xl,xh: -0.00172, 0.00171
+Orientation: 4
+rms: -0.00015417847950614742
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4324.08, -231.99
+threshold: 0.00172
+
+     fun: -0.00018605526306951994
+ message: 'Optimization terminated successfully.'
+    nfev: 273
+     nit: 2
+ success: True
+       x: array([540.51013681, -28.99934879])
+
+----------
+e2v: R21_S01
+xl,xh: -0.00139, 0.00132
+Orientation: 1
+rms: -0.00021401685892991038
+cuts: 1596, 2500
+
+xl,xh: -0.00144, 0.00133
+Orientation: 2
+rms: -0.00011904988833988993
+cuts: 1596, 1504
+
+xl,xh: -0.00144, 0.00135
+Orientation: 3
+rms: -7.106383315454937e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00140, 0.00133
+Orientation: 4
+rms: -0.00011622335147475916
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4665.46, -654.04
+threshold: 0.00140
+
+     fun: -0.00021401685892991038
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([583.18265607, -81.75555481])
+
+----------
+e2v: R21_S02
+xl,xh: -0.00131, 0.00126
+Orientation: 1
+rms: -0.00016104711502193893
+cuts: 1596, 2500
+
+xl,xh: -0.00128, 0.00121
+Orientation: 2
+rms: -0.00019380126224463091
+cuts: 1596, 1504
+
+xl,xh: -0.00131, 0.00125
+Orientation: 3
+rms: -7.341545346395614e-05
+cuts: 2500, 1504
+
+xl,xh: -0.00134, 0.00130
+Orientation: 4
+rms: -0.00015251708819324263
+cuts: 2500, 2500
+
+
+Orientation: 2
+Original scale coordinates: 4109.55, 4706.63
+threshold: 0.00134
+
+     fun: -0.00019380126224463091
+ message: 'Optimization terminated successfully.'
+    nfev: 1083
+     nit: 11
+ success: True
+       x: array([513.69435002, 588.3283804 ])
+
+----------
+e2v: R21_S21
+xl,xh: -0.00222, 0.00217
+Orientation: 1
+rms: -0.00035056354273021545
+cuts: 1596, 2500
+
+xl,xh: -0.00220, 0.00213
+Orientation: 2
+rms: -0.00016544920542896151
+cuts: 1596, 1504
+
+xl,xh: -0.00216, 0.00208
+Orientation: 3
+rms: -0.00017650794945420033
+cuts: 2500, 1504
+
+xl,xh: -0.00221, 0.00213
+Orientation: 4
+rms: -0.00015778271756332438
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4458.80, -165.15
+threshold: 0.00221
+
+     fun: -0.00035056354273021545
+ message: 'Optimization terminated successfully.'
+    nfev: 3873
+     nit: 42
+ success: True
+       x: array([557.34991665, -20.64393059])
+
+----------
+e2v: R21_S22
+xl,xh: -0.00152, 0.00143
+Orientation: 1
+rms: -7.544049430182385e-05
+cuts: 1596, 2500
+
+xl,xh: -0.00147, 0.00137
+Orientation: 2
+rms: -0.0001879896006416745
+cuts: 1596, 1504
+
+xl,xh: -0.00148, 0.00139
+Orientation: 3
+rms: -0.00016317721159703511
+cuts: 2500, 1504
+
+xl,xh: -0.00154, 0.00146
+Orientation: 4
+rms: -0.0002542144359482044
+cuts: 2500, 2500
+
+
+Orientation: 4
+Original scale coordinates: -560.38, -623.87
+threshold: 0.00154
+
+     fun: -0.0002542144359482044
+ message: 'Optimization terminated successfully.'
+    nfev: 723
+     nit: 7
+ success: True
+       x: array([-70.04742445, -77.98346824])
+
+----------
+e2v: R21_S10
+xl,xh: -0.00213, 0.00209
+Orientation: 1
+rms: -0.00016156987210117334
+cuts: 1596, 2500
+
+xl,xh: -0.00216, 0.00213
+Orientation: 2
+rms: -0.00012883066407908472
+cuts: 1596, 1504
+
+xl,xh: -0.00220, 0.00218
+Orientation: 3
+rms: -0.00017207988966623869
+cuts: 2500, 1504
+
+xl,xh: -0.00215, 0.00210
+Orientation: 4
+rms: -0.00013773032057876454
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -785.64, 4022.63
+threshold: 0.00215
+
+     fun: -0.00017207988966623869
+ message: 'Optimization terminated successfully.'
+    nfev: 1263
+     nit: 13
+ success: True
+       x: array([-98.20481819, 502.82853345])
+
+----------
+e2v: R21_S11
+xl,xh: -0.00100, 0.00096
+Orientation: 1
+rms: -0.00010362394417875094
+cuts: 1596, 2500
+
+xl,xh: -0.00101, 0.00094
+Orientation: 2
+rms: -0.00013792439129937353
+cuts: 1596, 1504
+
+xl,xh: -0.00105, 0.00099
+Orientation: 3
+rms: -0.0001403019731233516
+cuts: 2500, 1504
+
+xl,xh: -0.00101, 0.00099
+Orientation: 4
+rms: -0.0001201457654980169
+cuts: 2500, 2500
+
+
+Orientation: 3
+Original scale coordinates: -378.71, 4439.88
+threshold: 0.00101
+
+     fun: -0.0001403019731233516
+ message: 'Optimization terminated successfully.'
+    nfev: 993
+     nit: 10
+ success: True
+       x: array([-47.33890971, 554.98538161])
+
+----------
+e2v: R21_S20
+xl,xh: -0.00221, 0.00214
+Orientation: 1
+rms: -0.000277546204220391
+cuts: 1596, 2500
+
+xl,xh: -0.00219, 0.00210
+Orientation: 2
+rms: -0.0002410040812518898
+cuts: 1596, 1504
+
+xl,xh: -0.00216, 0.00206
+Orientation: 3
+rms: -0.00026658301407517975
+cuts: 2500, 1504
+
+xl,xh: -0.00219, 0.00211
+Orientation: 4
+rms: -0.0001116835857512263
+cuts: 2500, 2500
+
+
+Orientation: 1
+Original scale coordinates: 4610.21, -34.32
+threshold: 0.00219
+
+     fun: -0.000277546204220391
+ message: 'Optimization terminated successfully.'
+    nfev: 1353
+     nit: 14
+ success: True
+       x: array([576.27656182,  -4.28991723])
+
+-> done wiht all sensors in this raft
+

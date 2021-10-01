@@ -66,16 +66,18 @@ class tree_ring_tools:
         self.rmed = rmed
         self.signal_bin = signal_bin
         
-    def apply_high_freq_filter(self,smoothness=250,power=4.0):
+    def apply_high_freq_filter(self,smoothness=250,power=4.0,normalize=False):
         self.diff = apply_filter(self.img_cut, smoothness, power=power)
+        if normalize:
+            self.diff = self.diff/(self.img_cut+1.)
         
     def apply_gaussian_filter(self,downscale=8.):
         self.diff1 = gaussian_filter(self.diff, downscale)
     
     def apply_mask(self,downscale=8,threshold=0.5):
-        mask  = np.abs(self.diff1) > threshold
+        self.mask  = np.abs(self.diff1) > threshold
         diff2 = block_reduce(self.diff1, (downscale, downscale), func=np.nanmean)
-        mask2 = block_reduce(mask, (downscale, downscale)      , func=np.nanmax)
+        mask2 = block_reduce(self.mask, (downscale, downscale) , func=np.nanmax)
         diff2[mask2] = np.nan
         
         xmax = sensor_lims[self.sensor][0][1]
@@ -87,7 +89,10 @@ class tree_ring_tools:
         if r_cut is None: self.find_polar_lims(rborder=rborder)
         self.polar_cut = self.polar_img[self.theta_min:self.theta_max,self.rmin:self.rmax]
         
-        self.polar_img0 = cv2.warpPolar(self.diff, (int(self.maxR), 3600), (self.xc,self.yc), self.maxR, cv2.WARP_POLAR_LINEAR)
+        diff_mask = self.diff.copy()
+        diff_mask[self.mask] = np.nan
+        
+        self.polar_img0 = cv2.warpPolar(diff_mask, (int(self.maxR), 3600), (self.xc,self.yc), self.maxR, cv2.WARP_POLAR_LINEAR)
         self.polar_cut0 = self.polar_img0[self.theta_min:self.theta_max,self.rmin:self.rmax]
 
     def compute_signal(self,wfilter=False,freq=340,zeroNan=False):
