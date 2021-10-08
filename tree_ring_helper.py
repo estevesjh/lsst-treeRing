@@ -290,10 +290,14 @@ def imshow(image,axes,title='',show_colorbar=False,levels=[-0.015,0.015]):
     if show_colorbar: return im0
 
 def generate_image(self,var,MAX=0.07,fradius=140,sensor='e2v'):
-    dmap = {'dT':self.dT,'dXX':self.dXX,'dYY':self.dYY,'dXY':self.dXY,
+    nanmask = np.isfinite(self.deltaXX) #masks all the NaN entries created when a catalog didn't have 2401 entries
+    xxfltr_flat = self.xxfltr[nanmask].flatten()
+    yyfltr_flat = self.yyfltr[nanmask].flatten()
+
+    dmap = {'dT':self.dT/(xxfltr_flat+yyfltr_flat),'dXX':self.dXX/(xxfltr_flat),'dYY':self.dYY/(yyfltr_flat),'dXY':self.dXY,
             'dX':self.dX,'dY':self.dY,'dg1':self.dg1,'dg2':self.dg2,'dF':self.deltaF,
             'dr':self.dR,'dtheta':self.dt,'dgr':self.dgr,'dgt':self.dgt}
-    
+
     nbins = 400
     bins = [407,400] #approx. 10x10 px^2 binning
     dT_mean, x_edge, y_edge, binidx = binned_statistic_2d(self.xfltr_flat, self.yfltr_flat, dmap[var], 'mean',
