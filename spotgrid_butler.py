@@ -152,8 +152,8 @@ class SpotgridCatalog():
             instFluxErr_arr[spot_idx, i] = catalog['base_SdssShape_instFluxErr'][select]
 
             dFlux[spot_idx] = catalog['base_SdssShape_instFlux'][select]     - self.calib_table['base_SdssShape_instFlux'][spot_idx]
-            dg1[spot_idx]   = catalog['ext_shapeHSM_HsmShapeKsb_g1'][select] - self.calib_table['ext_shapeHSM_HsmShapeKsb_g1'][spot_idx]
-            dg2[spot_idx]   = catalog['ext_shapeHSM_HsmShapeKsb_g2'][select] - self.calib_table['ext_shapeHSM_HsmShapeKsb_g2'][spot_idx]
+            dg1[spot_idx]   = get_perc_error(catalog['ext_shapeHSM_HsmShapeKsb_g1'][select], self.calib_table['ext_shapeHSM_HsmShapeKsb_g1'][spot_idx])
+            dg2[spot_idx]   = get_perc_error(catalog['ext_shapeHSM_HsmShapeKsb_g2'][select], self.calib_table['ext_shapeHSM_HsmShapeKsb_g2'][spot_idx])
             
             # Set the not included spots to np.nan
             instFlux_arr[nan_idx, i]    = np.nan
@@ -376,6 +376,9 @@ class SpotgridCatalog():
         self.dg1= self.deltag1[nanmask].flatten()
         self.dg2= self.deltag2[nanmask].flatten()
 
+def get_perc_error(x,y):
+    return (x-y)/np.max(np.abs(np.vstack([x,y])),0)
+    #return (x-y)/((np.abs(x)+np.abs(y))/2.)
 #-------------------------------------------------------------------------------
 
 if __name__ == "__main__":
