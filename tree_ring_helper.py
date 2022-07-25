@@ -10,7 +10,7 @@ __author__ = "Johnny Esteves"
 import os
 import glob
 import numpy as np
-import fitsio as fits
+from astropy.io import fits#import fitsio as fits
 import matplotlib.pyplot as plt
 from scipy.signal.signaltools import wiener
 
@@ -289,14 +289,22 @@ def imshow(image,axes,title='',show_colorbar=False,levels=[-0.015,0.015]):
     axes.set_title(title)
     if show_colorbar: return im0
 
+def ell_from_2nd_moments(self):    
+    smear = self.dT
+    angle = self.dXX-self.dYY
+    shear = np.sqrt((1+angle)**2+4*self.dXY)-1.
+    return smear, angle, shear
+
 def generate_image(self,var,MAX=0.07,fradius=140,sensor='e2v'):
     nanmask = np.isfinite(self.deltaXX) #masks all the NaN entries created when a catalog didn't have 2401 entries
     xxfltr_flat = self.xxfltr[nanmask].flatten()
     yyfltr_flat = self.yyfltr[nanmask].flatten()
-
+    
+    smear, angle, shear = ell_from_2nd_moments(self)
     dmap = {'dT':self.dT/(xxfltr_flat+yyfltr_flat),'dXX':self.dXX/(xxfltr_flat),'dYY':self.dYY/(yyfltr_flat),'dXY':self.dXY,
             'dX':self.dX,'dY':self.dY,'dg1':self.dg1,'dg2':self.dg2,'dF':self.deltaF,
-            'dr':self.dR,'dtheta':self.dt,'dgr':self.dgr,'dgt':self.dgt}
+            'dr':self.dR,'dtheta':self.dt,'dgr':self.dgr,'dgt':self.dgt,
+            'smear':smear,'shear':shear,'angle':angle}
 
     nbins = 400
     bins = [407,400] #approx. 10x10 px^2 binning

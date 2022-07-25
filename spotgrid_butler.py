@@ -15,16 +15,25 @@ __author__ = "Johnny Esteves"
 import os
 import glob
 import numpy as np
-import fitsio as fits
+from astropy.io import fits#import fitsio as fits
 import matplotlib.pyplot as plt
 from scipy.stats import binned_statistic, binned_statistic_2d
 
-from lsst.daf.butler import Butler
-
 import sys
 sys.path.append('/gpfs/slac/kipac/fs1/u/esteves/codes/treeRingAnalysis/mixcoatl/python/')
-## MixCOATL imports
-from mixcoatl.sourcegrid import DistortedGrid
+
+try:
+    ## MixCOATL imports
+    from mixcoatl.sourcegrid import DistortedGrid
+    from lsst.daf.butler import Butler
+except:
+    print('You are not connected to a LSST machine')
+    class Butler:
+        print('Fake Bluter')
+        def __init__(self,repo):
+            print('repo: %s'%repo)
+            self.registry = None
+
 
 #-------------------------------------------------------------------------------
 import os
