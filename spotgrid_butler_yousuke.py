@@ -22,10 +22,13 @@ from scipy.stats import binned_statistic, binned_statistic_2d
 import sys
 sys.path.append('/gpfs/slac/kipac/fs1/u/esteves/codes/treeRingAnalysis/mixcoatl/python/')
 
+is_local = True
 try:
     ## MixCOATL imports
     from mixcoatl.sourcegrid import DistortedGrid
     from lsst.daf.butler import Butler
+    is_local = False
+    
 except:
     print('You are not connected to a LSST machine')
     class Butler:
@@ -40,6 +43,13 @@ from astropy.stats import SigmaClip
 from scipy.optimize import curve_fit
 #### YU
 
+keys_dict = {'u/snyder18/spot_13242/gridfit_run1': ['R03_S12','ITL'],
+             'u/snyder18/spot_13243/gridfit_run1': ['R10_S11','ITL'],
+             'u/snyder18/spot_13237/gridfit_run1': ['R24_S11','e2v'],
+             'u/snyder18/spot_13246/gridfit_run1': ['R32_S01','e2v'],
+             'u/asnyder/spot/e2v_analysis': ['R22_S11','e2v'],
+             'u/asnyder/spot/itl_analysis': ['R02_S02','ITL'],
+            }
 
 #-------------------------------------------------------------------------------
 import os
@@ -61,14 +71,21 @@ class SpotgridCatalog():
         self.calib_collection   = str(calib_collection)
         
         self.spot_size = 49*49
-        self.sensor    = sensor
-
-        save_dict = {'ITL': 'tmp/r02_s02',
-                     'e2v': 'tmp/r22_s11'}
 
         if not os.path.isdir('tmp'): os.makedirs('tmp')
-            
-        self.save = save_dict[self.sensor]
+        
+        if is_local:
+            self.sensor = keys_dict[catalog_collection][1]
+            self.sensorbay = keys_dict[catalog_collection][0]
+        else:
+        # retrieve metadata from an image
+            aref = list(self.registry.queryDatasets('postISRCCD', collections=self.calib_collection))[0]
+            animg=self.butler.get(aref,collections=self.calib_collection)
+            self.header = animg.getMetadata().toDict()
+            self.sensorbay=f'{self.header["RAFTBAY"].lower()}_{self.header["CCDSLOT"].lower()}'
+            self.sensor    = "e2v" if self.header["LSST_NUM"][:3] == "E2V" else "ITL"
+
+        self.save = 'tmp/%s'%(self.sensorbay)
         
         print('Repository        : %s'%(repository))
         print('catalog collection: %s'%(catalog_collection))
