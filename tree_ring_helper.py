@@ -25,14 +25,12 @@ plt.rcParams["axes.formatter.useoffset"] = False
 plt.rcParams['figure.figsize'] = [14.0, 10.0]
 plt.rcParams['font.size'] = 16
 
+import scipy
 from scipy.stats import binned_statistic_2d, binned_statistic
 from skimage.measure import block_reduce
 from scipy.ndimage.filters import gaussian_filter
 
-#centers = [[4320,-280],[-156,-280],[4320,4180],[-156,4180]]
-#centers = [[-310, 4086.36],[-156,-280],[4320,4180],[4439.24, -434.62]]
-#centers = [[-321.27, 4097.28],[-156,-280],[4320,4180],[4667, -678]]
-centers = [[-335.49, 4095.84],[-156,-280],[4320,4180],[4627.47, -630.89]]
+centers = [[4627.47, -630.89],[-156,-280],[4320,4180],[-335.49, 4095.84]]
 sensor_lims = {'e2v':[[0,4096],[0,4004]],'ITL':[[0,4072],[0,4000]]}
 
 class tree_ring_tools:
@@ -40,28 +38,31 @@ class tree_ring_tools:
     
     paramters:
     sensor  : str - 'e2v' or 'itl'
-    loc     : int - orientation of the ring pattern, 0,1,2,3 corresponds to (A,B,C,D) see paper ...
     """
-    def __init__(self,sensor='e2v',loc=0,maxR=6000):
-        self.sensor = sensor
+    def __init__(self,sensor_obj, maxR=6500):
+        print('Welcome to Tree Ring Tools')
+        self.sensor_obj = sensor_obj
+        self.sensorbay = sensor_obj.sensorbay
+        self.sensor = sensor_obj.sensor
 
         ## CCD center
-        self.xc = centers[loc][0] 
-        self.yc = centers[loc][1]
+        self.xc = sensor_obj.tr_xc
+        self.yc = sensor_obj.tr_yc
         self.maxR = maxR ## maximum radii
-        
-        ## levels image
-        self.l1 = -0.015
-        self.l2 = +0.015
-        
-        self.flat = None
                 
-    def make_image(self,spot_grid_obj,map,fradius=140):
-        img0,img,img_c =  generate_image(spot_grid_obj,map,fradius=fradius)
+    def make_image(self, variable, component, fradius=None):
+        self.variable = variable
+        img,img_c =  generate_image(self.sensor_obj, self.variable, component, fradius=fradius)
         self.img     = img   ## image
         self.img_cut = img_c ## image wo borders
+        
+        self.set_title()
     
-    def make_profile(self,image,step=1,mask=None):
+    def apply_strech(self, strech):
+        self.img = strech*self.img
+        self.img_cut = strech*self.img_cut
+        
+    def make_profile(self, image,step=1,mask=None):
         rmed, signal_bin = generate_profile(image, self.xc, self.yc, mask=mask, maxR=self.maxR, step=step, statistic='mean')
         self.rmed = rmed
         self.signal_bin = signal_bin
@@ -71,10 +72,14 @@ class tree_ring_tools:
         if normalize:
             self.diff = self.diff/(self.img_cut+1.)
         
-    def apply_gaussian_filter(self,downscale=8.):
+    def apply_gaussian_filter(self, downscale=8.):
+        self.img_cut = gaussian_filter(self.img_cut, downscale)
         self.diff1 = gaussian_filter(self.diff, downscale)
+        vlow, vhig = get_outlier_lims(self.diff1.flatten())
+        self.set_levels([vlow, vhig])
     
-    def apply_mask(self,downscale=8,threshold=0.5):
+    def apply_mask(self, downscale=4, threshold=0.5):
+        _, threshold = get_outlier_lims(self.diff1.flatten(),n=7.)
         self.mask  = np.abs(self.diff1) > threshold
         diff2 = block_reduce(self.diff1, (downscale, downscale), func=np.nanmean)
         mask2 = block_reduce(self.mask, (downscale, downscale) , func=np.nanmax)
@@ -85,7 +90,13 @@ class tree_ring_tools:
         self.diff2 = cv2.resize(diff2,(xmax,ymax), interpolation = cv2.INTER_AREA)
     
     def make_polar_transformation(self,r_cut=None,theta_cut=None,rborder=100.):
+        ones = np.ones_like(self.diff2)
         self.polar_img = cv2.warpPolar(self.diff2, (int(self.maxR), 3600), (self.xc,self.yc), self.maxR, cv2.WARP_POLAR_LINEAR)
+        ones_polar = cv2.warpPolar(ones, (int(self.maxR), 3600), (self.xc,self.yc), self.maxR, cv2.WARP_POLAR_LINEAR)
+        
+        is_nan = np.where(ones_polar != 1) 
+        self.polar_img[is_nan] = np.nan
+        
         if r_cut is None: self.find_polar_lims(rborder=rborder)
         self.polar_cut = self.polar_img[self.theta_min:self.theta_max,self.rmin:self.rmax]
         
@@ -131,7 +142,7 @@ class tree_ring_tools:
         axes.axhline(theta_max,color='k',lw=2,ls='--')
         
         for _ in np.arange(rmin, rmax+250, 250):
-            axes.axvline(_, color='r', alpha=0.2, lw=2.)
+            axes.axvline(_, color='r', alpha=0.9, ls='--', lw=3.)
         
 #         if self.flat is not None:
 #             mask = np.abs(self.flat)>= 0.01
@@ -144,20 +155,22 @@ class tree_ring_tools:
         
         plt.xlim(rmin-100,rmax+100)
         plt.ylim(theta_min-100,theta_max+100)
-    
+        fig.suptitle(self.title)
+        
     def display_images(self):
         fig, axes = plt.subplots(2, 2, figsize=(14, 12))
 
         imshow(self.img,axes[0,0],title='Original',levels=[self.l1,self.l2])
-        imshow(self.img_cut,axes[0,1],title='Original wo. Borders',levels=[self.l1,self.l2])
+        imshow(self.img_cut,axes[0,1],title='Original w/ Gaussian Smooth',levels=[self.l1,self.l2])
 
-        imshow(self.diff,axes[1,0],title='FFT High pass Filter',levels=[self.l1,self.l2])
-        im = imshow(self.diff2,axes[1,1],title='Masked FFT High pass Filter',show_colorbar=True,levels=[self.l1,self.l2])
+        imshow(self.diff,axes[1,0],title='FFT High Pass Filter',levels=[self.l1,self.l2])
+        im = imshow(self.diff2,axes[1,1],title='FFT High Pass Filter w/ Gaussian Smooth',show_colorbar=True,levels=[self.l1,self.l2])
 
         fig.subplots_adjust(right=0.8)
         rect = [0.825, 0.175, 0.03, 0.65] # l, b, w, h
         cbar_ax = fig.add_axes(rect)
         cb = fig.colorbar(im, cax=cbar_ax,label=self.ylabel)
+        fig.suptitle(self.title)
     
     def check_ccd_center_plot(self,image,xc=None,yc=None,xlims=(800,4370),ylims=(-320,3500),levels=None):
         if xc is None: xc = self.xc
@@ -168,10 +181,7 @@ class tree_ring_tools:
         plt.scatter(xc, yc, s=200, color='red', label="center: (%.0f,%.0f)" % (xc, yc))
         plt.legend(frameon=True, framealpha=1, loc=3)
         for _ in np.arange(500, 5000, 250):
-            plt.gca().add_patch(Circle((xc, yc), _, color='r', ls='-', fc='none', alpha=0.2, lw=2.))
-        
-        if self.flat is not None:
-            axes.imshow(self.flat,origin='lower',vmin=self.l1,vmax=self.l2)
+            plt.gca().add_patch(Circle((xc, yc), _, color='r', ls='--', fc='none', alpha=0.9, lw=3.))
         
         ## image
         im1 = axes.imshow(image,origin='lower',vmin=self.l1,vmax=self.l2)
@@ -183,11 +193,15 @@ class tree_ring_tools:
 
         axes.set_xlim(xlims)
         axes.set_ylim(ylims)
+        fig.suptitle(self.title)
+        return fig
     
     def plot_superposition_polar_signal(self,levels=None):
         if levels is None: levels = [self.l1,self.l2]
         y0 = (self.theta_max-self.theta_min)/2.
-        scale = y0*1000/3
+        frame_size = (2*y0)/10
+        signal_norm = levels[1]
+        scale = (frame_size)/signal_norm/3.
 
         fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(10, 6))
         
@@ -195,18 +209,21 @@ class tree_ring_tools:
         axes.xaxis.tick_top()
         
         AX=plt.gca()
-        AX.plot(-self.signal*scale/100+y0,'red',alpha=0.6,lw=2)
+        AX.plot(-self.signal*scale+y0,'red',alpha=0.6,lw=2)
         AX.grid(False)
         AX.set_xlim(xmin=0,xmax=len(self.radii))
 
-        axes.set_ylim(y0-2.*scale/1000,y0+2.*scale/1000)
+        #axes.set_ylim(y0,y0+2.*scale)
         
-        axes.set_ylabel(self.ylabel,fontsize=15)
+        axes.set_ylabel('Angle [1/10 Deg]',fontsize=15)
         axes.set_xlabel("Radius [px]",fontsize=15)
         
         axes.set_aspect('auto')
+        fig.suptitle(self.title)        
         plt.tight_layout()
-
+        
+        return fig
+        
     def plot_pannel_image_signal(self,levels=None):
         if levels is None: levels = [self.l1,self.l2]
             
@@ -225,8 +242,10 @@ class tree_ring_tools:
         axes[0].set_ylabel("Angle [0.1 Degree]",fontsize=15)
         axes[1].set_ylabel(self.ylabel,fontsize=15)
         axes[1].set_xlabel("Radius [px]",fontsize=15)
+        fig.suptitle(self.title)
         
         plt.tight_layout()
+        return fig
         
     def plot_flat_sup(self, flat):
         self.add_flat(flat)
@@ -239,11 +258,12 @@ class tree_ring_tools:
         axes.tick_params(axis='y', labelsize=12)
         axes.set_aspect('equal')
         
-        
         fig.subplots_adjust(right=0.8)
         rect = [0.825, 0.2, 0.03, 0.60] # l, b, w, h
         cbar_ax = fig.add_axes(rect)
         cb = fig.colorbar(im1, cax=cbar_ax,label=self.ylabel)
+        fig.suptitle(self.title)
+        return fig
 
     def find_polar_lims(self,rborder=100.):
         wx,wy = np.where(np.abs(self.polar_img)>0.)
@@ -259,6 +279,9 @@ class tree_ring_tools:
         diff = np.array([self.xc, self.yc])  - np.array([[xl,yl],[xl,yh],[xh,yl],[xh,yh]])
         self.r0 = int(np.min(np.sqrt(diff[:,0]**2+diff[:,1]**2)))
         
+    def set_title(self):
+        self.title = self.sensorbay + '\n' +self.variable
+        
     def set_ylabel(self,ylabel):
         self.ylabel = ylabel
     
@@ -272,12 +295,17 @@ class tree_ring_tools:
     def save_profile(self,var):
         sm = np.nanpercentile(self.polar_cut,25,0)
         sp = np.nanpercentile(self.polar_cut,75,0)
-        
+
         out = np.vstack([self.radii,self.signal,self.signal0,sm,sp])
-        outfile = 'profiles/polar_{}_{}.npy'.format(self.sensor,var)
+        outfile = 'profiles/{}_{}_{}.npy'.format(var,self.sensor.upper(),self.sensorbay)
         print('saving: %s'%outfile)
-        
+
         np.save(outfile,out)
+
+def get_outlier_lims(x,n=1.5):
+    xlo, xup = np.nanpercentile(x,[25.,75])
+    iqr = (xup-xlo)/2.
+    return xlo-n*iqr, xup+n*iqr
 
 def imshow(image,axes,title='',show_colorbar=False,levels=[-0.015,0.015]):
     im0 = axes.imshow(image,origin='lower',vmin=levels[0],vmax=levels[1], cmap='viridis')
@@ -295,37 +323,34 @@ def ell_from_2nd_moments(self):
     shear = np.sqrt((1+angle)**2+4*self.dXY)-1.
     return smear, angle, shear
 
-def generate_image(self,var,MAX=0.07,fradius=140,sensor='e2v'):
-    nanmask = np.isfinite(self.deltaXX) #masks all the NaN entries created when a catalog didn't have 2401 entries
-    xxfltr_flat = self.xxfltr[nanmask].flatten()
-    yyfltr_flat = self.yyfltr[nanmask].flatten()
+def generate_image(self,datatype,component,MAX=0.07,fradius=140,bins = [407,400]): 
+    '''
+    Generetates a pseudo image
+    self: spotgrid_class_object
+    datatye: 'psf-size', 'astrometric-shift', ...
+    component: x, y, r, t, abs, abs_diff
+    '''
+    #[407, 400] approx. 10x10 px^2 binning
+    dmap = self.data[datatype]
     
-    smear, angle, shear = ell_from_2nd_moments(self)
-    dmap = {'dT':self.dT/(xxfltr_flat+yyfltr_flat),'dXX':self.dXX/(xxfltr_flat),'dYY':self.dYY/(yyfltr_flat),'dXY':self.dXY,
-            'dX':self.dX,'dY':self.dY,'dg1':self.dg1,'dg2':self.dg2,'dF':self.deltaF,
-            'dr':self.dR,'dtheta':self.dt,'dgr':self.dgr,'dgt':self.dgt,
-            'smear':smear,'shear':shear,'angle':angle}
-
-    nbins = 400
-    bins = [407,400] #approx. 10x10 px^2 binning
-    dT_mean, x_edge, y_edge, binidx = binned_statistic_2d(self.xfltr_flat, self.yfltr_flat, dmap[var], 'mean',
-                                                          range=sensor_lims[sensor], bins=bins)
-                                                          #mean is significantly faster calculation
-    
-    ## cut borders
-    mask    = mask_borders(self,x_edge,y_edge,dT_mean,MAX=MAX,fradius=fradius)
-    
+    dT_mean, x_edge, y_edge, binidx = binned_statistic_2d(
+                                    self.xfltr_flat,
+                                    self.yfltr_flat,
+                                    dmap[component],
+                                    lambda x: scipy.stats.norm.fit(x[np.isfinite(x)])[0],
+                                    range=sensor_lims[self.sensor], bins=bins)    
     ## sensor max limits
     xmax = sensor_lims[self.sensor][0][1]
     ymax = sensor_lims[self.sensor][1][1]
     
+    if fradius is not None:
+        dT_mean    = mask_borders(self,x_edge,y_edge,dT_mean, MAX=MAX, fradius=fradius)
+    
     ## resize image
     resized     = cv2.resize(dT_mean.T,(xmax,ymax), interpolation = cv2.INTER_AREA)
-    resized_cut = cv2.resize(mask.T   ,(xmax,ymax), interpolation = cv2.INTER_AREA)
-    
-    return dT_mean,resized,resized_cut
+    return dT_mean.T, resized                             
 
-def generate_profile(diff,x0, y0, mask=None, maxR=6000,step=1, statistic='mean'):
+def generate_profile(diff, x0, y0, mask=None, maxR=6000,step=1, statistic='mean'):
     '''Function to measure tree rings in original image given the center'''
     y,x = np.mgrid[0:diff.shape[0], 0:diff.shape[1]]
     r   = np.hypot(x-x0, y-y0)
@@ -410,11 +435,14 @@ if __name__ == "__main__":
     itl.compute_spotgrid()
     itl.filter_spots()
     itl.calibrate()
-
+    itl.compute_ellipticities()
+    itl.get_imaging_map()    
+    itl.transform_to_treeRing_coords()
+    
     for var in ['dX','dY','dXX','dYY','dT','dg1','dg2']:
         print('generating profile: %s'%var)
-        ring = tree_ring_tools(sensor=sensor,loc=0)
-        ring.make_image(self,var,fradius=145)
+        ring = tree_ring_tools(itl)
+        ring.make_image(var,fradius=None)
 
         ## image processing: high pass filter and smooth; 
         ## always run in the following order
@@ -448,4 +476,3 @@ if __name__ == "__main__":
         ## Checking Plots
         # ring.check_polar_transfomartion()
         # ring.check_ccd_center_plot(ring.diff2,ring.xc,ring.yc)
-
