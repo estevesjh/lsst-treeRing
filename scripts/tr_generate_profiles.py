@@ -21,6 +21,7 @@ import posixpath, datetime, sys
 
 from spotgrid_butler_new import SpotgridCatalog
 import tree_ring_helper as tr
+
 keys = {
         'astrometric-shift':['r','Astrometric Shift [pixels]',1.],
         'flux-ratio':['abs','Flux-Ratio', 100.],
@@ -46,6 +47,7 @@ for mysetting in setting:
 
     #asensor.get_calibration_table()
     sensor.load_data()
+    sensor.correct_shaking()
     sensor.compute_statistics()
     sensor.filter_spots(value=.4)   # value=.4
     sensor.compute_spotgrid()
@@ -57,6 +59,7 @@ for mysetting in setting:
     sensor.transform_to_treeRing_coords()
     
     sensors.append(sensor)
+    print('\n')
     
 ## Generate Tree Ring Profiles
 treeRings = {}
@@ -73,12 +76,13 @@ for variable in keys.keys():
         ring.apply_strech(strech)
         ring.apply_high_freq_filter()
         ring.apply_gaussian_filter(downscale=4)
-        ring.apply_mask(threshold=0.5)
-        ring.make_polar_transformation()
+        ring.apply_mask()
+        ring.make_polar_transformation(theta_cut=[100, 550])
         ring.compute_signal()
         ring.make_profile(ring.diff,step=1)
         ring.save_profile(variable)
         rings.append(ring)
     treeRings[variable] = rings
+    print('\n')
 
 # Make Plots
