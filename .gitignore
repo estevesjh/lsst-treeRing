@@ -1,0 +1,16 @@
+.installed.cfg
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+src/*.egg-info
+lib
+lib64
+
+.DS_Store
+.ipynb_checkpoints
+
+*/old/*
+__pycache__
