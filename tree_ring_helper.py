@@ -67,8 +67,8 @@ class tree_ring_tools:
         self.rmed = rmed
         self.signal_bin = signal_bin
         
-    def apply_high_freq_filter(self,smoothness=250,power=4.0,normalize=False):
-        self.diff = apply_filter(self.img_cut, smoothness, power=power)
+    def apply_high_freq_filter(self,smoothness=250,power=4.0,normalize=False, use_zero=False):
+        self.diff = apply_filter(self.img_cut, smoothness, power=power, use_zero=use_zero)
         if normalize:
             self.diff = self.diff/(self.img_cut+1.)
         
@@ -78,8 +78,8 @@ class tree_ring_tools:
         vlow, vhig = get_outlier_lims(self.diff1.flatten())
         self.set_levels([vlow, vhig])
     
-    def apply_mask(self, downscale=4, threshold=0.5):
-        _, threshold = get_outlier_lims(self.diff1.flatten(),n=7.)
+    def apply_mask(self, downscale=4, threshold=None):
+        if threshold is None: _, threshold = get_outlier_lims(self.diff1.flatten(),n=6.)
         self.mask  = np.abs(self.diff1) > threshold
         diff2 = block_reduce(self.diff1, (downscale, downscale), func=np.nanmean)
         mask2 = block_reduce(self.mask, (downscale, downscale) , func=np.nanmax)
@@ -98,14 +98,16 @@ class tree_ring_tools:
         self.polar_img[is_nan] = np.nan
         
         if r_cut is None: self.find_polar_lims(rborder=rborder)
+        if theta_cut is not None: self.set_theta_cut(theta_cut)
         self.polar_cut = self.polar_img[self.theta_min:self.theta_max,self.rmin:self.rmax]
         
-        diff_mask = self.diff.copy()
-        diff_mask[self.mask] = np.nan
-        
-        self.polar_img0 = cv2.warpPolar(diff_mask, (int(self.maxR), 3600), (self.xc,self.yc), self.maxR, cv2.WARP_POLAR_LINEAR)
+        self.polar_img0 = cv2.warpPolar(self.diff, (int(self.maxR), 3600), (self.xc,self.yc), self.maxR, cv2.WARP_POLAR_LINEAR)
         self.polar_cut0 = self.polar_img0[self.theta_min:self.theta_max,self.rmin:self.rmax]
 
+    def set_theta_cut(self, theta_cut):
+        self.theta_max = self.theta_min+theta_cut[1]
+        self.theta_min += theta_cut[0]
+        
     def compute_signal(self,wfilter=False,freq=340,zeroNan=False):
         if zeroNan:
             self.polar_cut = nanzero(self.polar_cut)
@@ -268,10 +270,13 @@ class tree_ring_tools:
     def find_polar_lims(self,rborder=100.):
         wx,wy = np.where(np.abs(self.polar_img)>0.)
         r_cut     = np.percentile(wy,[0,100])-np.array([-rborder,rborder])
-        theta_cut = np.percentile(wx,[0,100])-np.array([-10,10])
+        self.rmin, self.rmax = [int(ri) for ri in r_cut]
+        
+        wx,wy = np.where((np.abs(self.polar_img)[:,self.rmin+500:]>0.))
+        theta_cut = np.percentile(wx,[50,50])+np.array([-150,150])
 
-        self.rmin, self.rmax           = [int(ri) for ri in r_cut]
         self.theta_min, self.theta_max = [int(ti) for ti in theta_cut]
+
     
     def set_r0(self):
         xl,xh = sensor_lims[self.sensor][0][0],sensor_lims[self.sensor][0][1]
@@ -303,7 +308,7 @@ class tree_ring_tools:
         np.save(outfile,out)
 
 def get_outlier_lims(x,n=1.5):
-    xlo, xup = np.nanpercentile(x,[25.,75])
+    xlo, xup = np.nanpercentile(x,[16.,84.])
     iqr = (xup-xlo)/2.
     return xlo-n*iqr, xup+n*iqr
 
@@ -406,73 +411,129 @@ def _apply_filter(A, smoothing, power=2.0):
     S[:ny, :nx] = np.fft.irfft2(T * F)
     return S
 
-def apply_filter(img, smoothing, power=2.0):
-    imgn = img.copy()
-    imgn[np.isnan(img)] = np.nanmedian(img)
+def zero_by_region(data, region_shape, num_sigmas_clip=4.0, smoothing=250, power=4):
+    """Subtract the clipped median signal in each amplifier region.
+    
+    Optionally also remove any smooth variation in the mean signal with
+    a high-pass filter controlled by the smoothing and power parameters.
+    Returns a an array of median levels in each region and a mask of
+    unclipped pixels.
+    """
+    mask = np.zeros_like(data, dtype=bool)
 
-    diff = _apply_filter(imgn, 250, power=4.0)
-    diff[np.isnan(img)] = np.nan
-    return diff
+    # Loop over amplifier regions.
+    regions = block_view(data, region_shape)
+    masks   = block_view(mask, region_shape)
+    ny, nx = regions.shape[:2]
+    levels = np.empty((ny, nx))
+  
+    for y in range(ny):
+        for x in range(nx):
+            region_data = regions[y, x]
+            region_mask = masks[y, x]
+            clipped1d, lo, hi = scipy.stats.sigmaclip(
+                region_data, num_sigmas_clip, num_sigmas_clip)
+            # Add unclipped pixels to the mask.
+            region_mask[(region_data > lo) & (region_data < hi)] = True            
+            # Subtract the clipped median in place.
+            levels[y, x] = np.median(clipped1d)
+            region_data -= levels[y, x]
+            # Smooth this region's data.
+            if smoothing != 0:
+                clipped_data = region_data[~region_mask]
+                region_data[~region_mask] = 0.
+                region_data[:] = _apply_filter(region_data, smoothing, power)
+                region_data[~region_mask] = clipped_data
+                
+    return levels, mask
+
+import numpy
+import scipy
+
+def block_view(A, block_shape):
+    """Provide a 2D block view of a 2D array.
+    
+    Returns a view with shape (n, m, a, b) for an input 2D array with
+    shape (n*a, m*b) and block_shape of (a, b).
+    """
+    assert len(A.shape) == 2, '2D input array is required.'
+    assert A.shape[0] % block_shape[0] == 0, 'Block shape[0] does not evenly divide array shape[0].'
+    assert A.shape[1] % block_shape[1] == 0, 'Block shape[1] does not evenly divide array shape[1].'
+    shape = np.array((A.shape[0] / block_shape[0], A.shape[1] / block_shape[1]) + block_shape).astype(int)
+    strides = np.array((block_shape[0] * A.strides[0], block_shape[1] * A.strides[1]) + A.strides).astype(int)
+    return numpy.lib.stride_tricks.as_strided(A, shape=shape, strides=strides)
+
+def apply_filter(img, smoothing, power=2.0, use_zero=False, geometry=(2,8)):
+    image1 = img.copy()
+    image1[np.isnan(img)] = np.nanmedian(img)
+    if use_zero:
+        levels,mask = zero_by_region(image1, (image1.shape[0]/geometry[0], image1.shape[1]/geometry[1]))
+        return image1
+    else:
+        diff = _apply_filter(image1, 250, power=4.0)
+        diff[np.isnan(img)] = np.nan
+        return diff
 
 def nanzero(img):
     img[np.where(img==0)] = np.nan
     return img
 
 if __name__ == "__main__":
-    import sys
-    sys.path.append('/gpfs/slac/kipac/fs1/u/esteves/codes/treeRingAnalysis/')
-    from spotgrid_butler import SpotgridCatalog
+    print('main')
+    # import sys
+    # sys.path.append('/gpfs/slac/kipac/fs1/u/esteves/codes/treeRingAnalysis/')
+    # from spotgrid_butler import SpotgridCatalog
 
-    ### load spot data
-    repo = '/sdf/group/lsst/camera/IandT/repo_gen3/spot_9raft/butler.yaml'
-    itl = SpotgridCatalog(repo,
-                        'u/asnyder/spot/itl_analysis',
-                        'u/asnyder/spot/itl_calibration',sensor='ITL')
+    # ### load spot data
+    # repo = '/sdf/group/lsst/camera/IandT/repo_gen3/spot_9raft/butler.yaml'
+    # itl = SpotgridCatalog(repo,
+    #                     'u/asnyder/spot/itl_analysis',
+    #                     'u/asnyder/spot/itl_calibration',sensor='ITL')
 
-    itl.get_calibration_table()
-    itl.load_data()
-    itl.compute_statistics()
-    itl.compute_spotgrid()
-    itl.filter_spots()
-    itl.calibrate()
-    itl.compute_ellipticities()
-    itl.get_imaging_map()    
-    itl.transform_to_treeRing_coords()
+    # itl.get_calibration_table()
+    # itl.load_data()
+    # itl.compute_statistics()
+    # itl.compute_spotgrid()
+    # itl.filter_spots()
+    # itl.calibrate()
+    # itl.compute_ellipticities()
+    # itl.get_imaging_map()    
+    # itl.transform_to_treeRing_coords()
     
-    for var in ['dX','dY','dXX','dYY','dT','dg1','dg2']:
-        print('generating profile: %s'%var)
-        ring = tree_ring_tools(itl)
-        ring.make_image(var,fradius=None)
+    # for var in ['dX','dY','dXX','dYY','dT','dg1','dg2']:
+    #     print('generating profile: %s'%var)
+    #     ring = tree_ring_tools(itl)
+    #     ring.make_image(var,fradius=None)
 
-        ## image processing: high pass filter and smooth; 
-        ## always run in the following order
-        ring.apply_high_freq_filter()
-        ring.apply_gaussian_filter()
-        ring.apply_mask()
+    #     ## image processing: high pass filter and smooth; 
+    #     ## always run in the following order
+    #     ring.apply_high_freq_filter()
+    #     ring.apply_gaussian_filter()
+    #     ring.apply_mask()
 
-        ## warpPolar transformation signal analysis
-        ring.make_polar_transformation()
-        ring.compute_signal()
+    #     ## warpPolar transformation signal analysis
+    #     ring.make_polar_transformation()
+    #     ring.compute_signal()
 
-        ## bining signal analysis
-        ring.make_profile(ring.diff,step=1)
+    #     ## bining signal analysis
+    #     ring.make_profile(ring.diff,step=1)
         
-        ## save output
-        ring.save_profile(var)
+    #     ## save output
+    #     ring.save_profile(var)
 
-        ## Checking Plots
-        # ring.set_ylabel(r'dX [pixel]')
-        # ring.set_levels([-0.001,0.001])
+    #     ## Checking Plots
+    #     # ring.set_ylabel(r'dX [pixel]')
+    #     # ring.set_levels([-0.001,0.001])
 
-        ## display 4 images
-        # ring.display_images()
+    #     ## display 4 images
+    #     # ring.display_images()
 
-        ## 2 pannel: signal and image
-        # ring.plot_pannel_image_signal()
+    #     ## 2 pannel: signal and image
+    #     # ring.plot_pannel_image_signal()
 
-        ## signal over the image 
-        # ring.plot_superposition_polar_signal()
+    #     ## signal over the image 
+    #     # ring.plot_superposition_polar_signal()
 
-        ## Checking Plots
-        # ring.check_polar_transfomartion()
-        # ring.check_ccd_center_plot(ring.diff2,ring.xc,ring.yc)
+    #     ## Checking Plots
+    #     # ring.check_polar_transfomartion()
+    #     # ring.check_ccd_center_plot(ring.diff2,ring.xc,ring.yc)

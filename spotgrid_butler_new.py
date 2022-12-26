@@ -87,10 +87,11 @@ class SpotgridCatalog():
 
         self.save = 'tmp/%s'%(self.sensorbay)
         
+        print(10*'-----')
         print('Repository        : %s'%(repository))
         print('catalog collection: %s'%(catalog_collection))
         print('calib collection  : %s'%(calib_collection))
-        print('\n')
+        # print('\n')
 
         # self.get_calibration_table()
         # self.load_data()
