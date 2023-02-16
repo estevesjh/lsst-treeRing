@@ -67,7 +67,7 @@ class tree_ring_tools:
         self.rmed = rmed
         self.signal_bin = signal_bin
         
-    def apply_high_freq_filter(self,smoothness=250,power=4.0,normalize=False, use_zero=False):
+    def apply_high_freq_filter(self, smoothness=250, power=4.0, normalize=False, use_zero=False):
         self.diff = apply_filter(self.img_cut, smoothness, power=power, use_zero=use_zero)
         if normalize:
             self.diff = self.diff/(self.img_cut+1.)
@@ -77,17 +77,23 @@ class tree_ring_tools:
         self.diff1 = gaussian_filter(self.diff, downscale)
         vlow, vhig = get_outlier_lims(self.diff1.flatten())
         self.set_levels([vlow, vhig])
-    
+
+    def _resize(self, img):
+        xmax = sensor_lims[self.sensor][0][1]
+        ymax = sensor_lims[self.sensor][1][1]
+        return cv2.resize(img, (xmax,ymax), interpolation = cv2.INTER_AREA)
+
     def apply_mask(self, downscale=4, threshold=None):
         if threshold is None: _, threshold = get_outlier_lims(self.diff1.flatten(),n=6.)
         self.mask  = np.abs(self.diff1) > threshold
         diff2 = block_reduce(self.diff1, (downscale, downscale), func=np.nanmean)
         mask2 = block_reduce(self.mask, (downscale, downscale) , func=np.nanmax)
         diff2[mask2] = np.nan
-        
-        xmax = sensor_lims[self.sensor][0][1]
-        ymax = sensor_lims[self.sensor][1][1]
-        self.diff2 = cv2.resize(diff2,(xmax,ymax), interpolation = cv2.INTER_AREA)
+        self.diff2 = self._resize(diff2)
+
+        # xmax = sensor_lims[self.sensor][0][1]
+        # ymax = sensor_lims[self.sensor][1][1]
+        # self.diff2 = cv2.resize(diff2,(xmax,ymax), interpolation = cv2.INTER_AREA)
     
     def make_polar_transformation(self,r_cut=None,theta_cut=None,rborder=100.):
         ones = np.ones_like(self.diff2)
@@ -463,14 +469,14 @@ def block_view(A, block_shape):
     strides = np.array((block_shape[0] * A.strides[0], block_shape[1] * A.strides[1]) + A.strides).astype(int)
     return numpy.lib.stride_tricks.as_strided(A, shape=shape, strides=strides)
 
-def apply_filter(img, smoothing, power=2.0, use_zero=False, geometry=(2,8)):
+def apply_filter(img, smoothing, power=4.0, use_zero=False, geometry=(2,8)):
     image1 = img.copy()
     image1[np.isnan(img)] = np.nanmedian(img)
     if use_zero:
         levels,mask = zero_by_region(image1, (image1.shape[0]/geometry[0], image1.shape[1]/geometry[1]))
         return image1
     else:
-        diff = _apply_filter(image1, 250, power=4.0)
+        diff = _apply_filter(image1, smoothing, power=power)
         diff[np.isnan(img)] = np.nan
         return diff
 
