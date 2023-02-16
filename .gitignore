@@ -14,3 +14,9 @@ lib64
 
 */old/*
 __pycache__
+
+*.pdf
+*.fits
+*.tex
+*.pkl
+
