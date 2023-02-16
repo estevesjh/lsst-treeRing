@@ -188,7 +188,7 @@ class SpotgridCatalog():
             instFlux_arr[spot_idx, i]    = catalog['base_SdssShape_instFlux'][select]
             instFluxErr_arr[spot_idx, i] = catalog['base_SdssShape_instFluxErr'][select]
 
-            dFlux[spot_idx] = catalog['base_SdssShape_instFlux'][select] - self.calib_table['base_SdssShape_instFlux'][spot_idx]
+            dFlux[spot_idx] = catalog['base_SdssShape_instFlux'][select] / self.calib_table['base_SdssShape_instFlux'][spot_idx]
             #### What's the purpose of those perc_error? These seem to complicate residuals of shears, by not letting the average to be zero
 #            dg1[spot_idx]   = get_perc_error(catalog['ext_shapeHSM_HsmShapeKsb_g1'][select], self.calib_table['ext_shapeHSM_HsmShapeKsb_g1'][spot_idx])
 #            dg2[spot_idx]   = get_perc_error(catalog['ext_shapeHSM_HsmShapeKsb_g2'][select], self.calib_table['ext_shapeHSM_HsmShapeKsb_g2'][spot_idx])
@@ -498,6 +498,7 @@ class SpotgridCatalog():
         # flux-ratio [%]
         mydict = dict().fromkeys(['abs'])
         mydict['abs'] = self.dF
+        mydict['mag'] = np.log10(1/(1-self.dF))
         dmap['flux-ratio'] = mydict
         
         # astrometric-shift [pixel]
@@ -527,7 +528,8 @@ class SpotgridCatalog():
         # transform to the TR coordinate system    
         # tr-center look-up table
         tr_center_lut = read_tr_center_table(fname)
-        self.tr_xc, self.tr_yc = tr_center_lut[self.sensorbay]
+        sensorbay = self.sensorbay.replace('-','_')
+        self.tr_xc, self.tr_yc = tr_center_lut[sensorbay]
 
         r, t = trasnform_to_polar_coord(self.xfltr_flat,self.yfltr_flat, x0=self.tr_xc, y0=self.tr_yc)
 
