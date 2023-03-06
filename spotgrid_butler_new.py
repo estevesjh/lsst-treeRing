@@ -489,6 +489,54 @@ class SpotgridCatalog():
         self.e2 = de2_all[nanmask].flatten()
         self.shear = den_all[nanmask].flatten()
 
+    def compute_ellipticities2(self):
+        """compute_ellipticities2 
+
+        Following the second definition of ellipticity from second-moments according to
+        https://www.astro.umd.edu/~richard/ASTR480/Schneider_weak_lensing.pdf
+        """
+        nanmask = np.isfinite(self.deltaXX) #masks all the NaN entries created when a catalog didn't have 2401 entries
+
+        # the only difference of the new ellipticity is the denuemerator
+        # den = Trace+Sqrt(Det) of the Ixy matrix
+        trace = self.xx_arr+self.yy_arr
+        det = self.xx_arr*self.yy_arr - self.xy_arr**2
+        den = trace+2*np.sqrt(det)
+
+        e1_total = (self.xx_arr-self.yy_arr)/den
+        e2_total = 2*self.xy_arr/den
+        en_total = np.sqrt(e1_total**2+e2_total**2)
+        
+        # re-computing the calibration values
+        # Ixx,cal = Ixx - dIxx
+        Ixx_cal = self.xx_arr - self.dxx_arr
+        Iyy_cal = self.yy_arr - self.dyy_arr
+        Ixy_cal = self.xy_arr - self.dxy_arr
+
+        # now compute eps for the calibration
+        trace_cal = Ixx_cal+Iyy_cal
+        det_cal = Ixx_cal*Iyy_cal-Ixy_cal**2
+        den_cal = trace_cal + 2*np.sqrt(det_cal)
+
+        e1_cal = (Ixx_cal-Iyy_cal)/den_cal
+        e2_cal = (2*Ixy_cal)/den_cal
+        en_cal = np.sqrt(e1_cal**2+e2_cal**2)
+        
+        ## calibrating the measurements
+        de0_all = (trace[self.spot_filter]-trace_cal[self.spot_filter])/trace_cal[self.spot_filter]
+        de1_all = (e1_total[self.spot_filter]-e1_cal[self.spot_filter])
+        de2_all = (e2_total[self.spot_filter]-e2_cal[self.spot_filter])
+        den_all = (en_total[self.spot_filter]-en_cal[self.spot_filter])
+
+        self.e0 = de0_all[nanmask].flatten()
+        self.e1 = de1_all[nanmask].flatten()
+        self.e2 = de2_all[nanmask].flatten()
+        self.shear = den_all[nanmask].flatten()
+
+        # self.e1_mean = np.nanmedian(self.e1, axis=1)
+        # self.e2_mean = np.nanmedian(self.e2, axis=1)
+        # self.shear_std = np.nanstd(self.shear, axis=1)
+
     def get_imaging_map(self):
         dmap = defaultdict()
         nanmask = np.isfinite(self.deltaXX)  #masks all the NaN entries created when a catalog didn't have 2401 entries
@@ -497,7 +545,7 @@ class SpotgridCatalog():
         
         # flux-ratio [%]
         mydict = dict().fromkeys(['abs'])
-        mydict['abs'] = self.dF
+        mydict['abs'] = self.dF #np.nanmedian(self.dF.flatten())
         mydict['mag'] = np.log10(1/(1-self.dF))
         dmap['flux-ratio'] = mydict
         
