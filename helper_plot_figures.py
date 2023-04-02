@@ -426,8 +426,8 @@ setting = [
     (repo9, 'u/asnyder/spot/e2v_analysis', 'u/asnyder/spot/e2v_calibration'),        
     (repo9, 'u/asnyder/spot/itl_analysis', 'u/asnyder/spot/itl_calibration')]
 
-# only for tests
-# setting = [setting[2]]
+# # only for tests
+# setting = [setting[0]]
 
 # KeyWords Dictionary
 # Figure 1 & 2
@@ -447,17 +447,17 @@ import tree_ring_helper as tr
 scale_dict = {'flux': 1e4, 'psf-size': 1e2, 'pos-x':1e4, 'pos-y':1e4, 'shape-x':1e3, 'shape-y':1e3}
 
 keys1 = {
-        'flux':['abs',r'Photometry: $\delta f$',r'frac. deviation [$10^{-4}$]', 1.],
-        'psf-size':['abs','PSF-Size: $\delta T = (\delta I_{xx}+ \delta I_{yy})/T$',r'frac. deviation [$10^{-4}$]',100.],
-        'pos-x':['x','Position: $\delta x$',r'[$10^{-4}$ pixels]',1.],
-        'pos-y':['y','Position: $\delta y$',r'[$10^{-4}$ pixels]',1.],
-        'shape-x':['y','Shape: $\delta e_2$',r'deviation [$10^{-5}$]',100.],
-        'shape-y':['x','Shape: $\delta e_1$',r'deviation [$10^{-5}$]',100.],
+        'flux':['abs',r'Photometry: $\delta f\,\ /\,\,f$',r'frac. deviation [$10^{-4}$]', 1.],
+        'psf-size':['abs','PSF-Size: $\delta T \,\, /\,T$',r'frac. deviation [$10^{-4}$]',100.],
+        'pos-x':['x','Astrometry: $\delta x$',r'deviation [$10^{-4}$ pixels]',1.],
+        'pos-y':['y','Astrometry: $\delta y$',r'deviation [$10^{-4}$ pixels]',1.],
+        'shape-x':['y','PSF-Shape: $\delta e_2$',r'deviation [$10^{-5}$]',100.],
+        'shape-y':['x','PSF-Shape: $\delta e_1$',r'deviation [$10^{-5}$]',100.],
        }
        
 keys2 = {
-        'flux':['abs','Photometry','$\delta f \; [\times 10^{-4}]$','$\delta f$', 1/1e4, ''],
-        'psf-size':['abs','PSF-Size','perc. deviation','$\delta T$',1/1e4, ''],
+        'flux':['abs','Photometry','$\delta f\,\ /\,\,f ; [\times 10^{-4}]$','$\delta f\,\ /\,\,f$', 1/1e4, ''],
+        'psf-size':['abs','PSF-Size','perc. deviation','$\delta T\,\, /\,\,T$',1/1e4, ''],
         'pos-x':['x','Astrometry','$\delta \ell$ [pixel]','$\delta x$',1/1e4, 'pixel'],
         'pos-y':['y','Astrometry','$\delta \ell$ [pixel]','$\delta y$',1/1e4, 'pixel'],
         'shape-x':['y','PSF-Shape','perc. deviation [%]','$\delta e_1$',1/1e5, ''],
@@ -489,9 +489,10 @@ def load_sensors():
         sensor.calibrate()
 
         # new functions
+        sensor.compute_ellipticities3()
         # sensor.compute_ellipticities2()
-        sensor.compute_ellipticities()
-        sensor.get_imaging_map()    
+        # sensor.compute_ellipticities()
+        sensor.get_imaging_map()
         sensor.transform_to_treeRing_coords()
 
         sensors.append(sensor)

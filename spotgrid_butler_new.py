@@ -277,7 +277,12 @@ class SpotgridCatalog():
         """
         compute median of x for each exposure
         and subtract median(x) from each spot on the exposure
+        and subtract the plane (x,y)
+
         """
+        # a is the x tilt contribution
+        # b is the y tilt contribution
+        # c is the median contribution
         def function(data, a, b, c ):
             x = data[0]
             y = data[1]
@@ -307,16 +312,26 @@ class SpotgridCatalog():
         return z
     
     def correct_shaking(self):
+        """correct_shaking 
+
+        Correct for the tilt due to the vibration z-stage
+        The input quantity needs to be linear
+        Doesn't work for ellipticities
+        """
         self.dx_arr  = self.clean2(self.dx_arr)
         self.dy_arr  = self.clean2(self.dy_arr)
         
-        #subtract "calibrated" grid I_xx+yy (median) moment from each star
+        # calibration values used on the delta
+        self.xx_cal_arr = self.xx_arr-self.dxx_arr
+        self.yy_cal_arr = self.yy_arr-self.dyy_arr
+        self.xy_cal_arr = self.xy_arr-self.dxy_arr
+
+        # correct the shaking on the residuals measurements
         self.dxx_arr = self.clean2(self.dxx_arr)
         self.dyy_arr = self.clean2(self.dyy_arr)
         self.dxy_arr = self.clean2(self.dxy_arr)
         self.dt_arr   = self.dxx_arr + self.dyy_arr
         self.dFlux_arr  = self.clean2(self.dFlux_arr/self.instFlux_arr)
-
         
     def compute_statistics(self):
         print(f'Computing statistics for {self.sensor} {self.save}.')
@@ -479,9 +494,27 @@ class SpotgridCatalog():
         en_cal = np.sqrt(e1_cal**2+e2_cal**2)
         
         ## calibrating the measurements
+        # de1_all = (e1.T - <e1>.<T>)/<T> = deltaIxx -  deltaIyy
+        # de2_all = (e2.T - <e2>.<T>)/<T> = 2 deltaIxy
+
+        # psf-size is the psf_size_int + psf_size_optical(w/shaking) + delta_sensor
+        # psf-size cal is psf_size_int + psf_size_optical
+        # delta psf-size is delta-sensor
+        # \delta T/ (T+\delta_opt+\delta T) \approx \delta T/T *(1-\delta/T-\delta_opt/T)
+        # \delta T/ (T+\delta_opt) \approx  \delta T/T *(1- \delta_opt/T)
         de0_all = (e0_total[self.spot_filter]-e0_cal[self.spot_filter])/e0_cal[self.spot_filter]
         de1_all = (e1_total[self.spot_filter]-e1_cal[self.spot_filter])/e0_cal[self.spot_filter]
         de2_all = (e2_total[self.spot_filter]-e2_cal[self.spot_filter])/e0_cal[self.spot_filter]
+
+        # < \delta e > = < \sqrt{ \delta e_1^ +  \delta e_2^2} > != 0
+
+        # \delta_e = |e|-|e|_cal
+        # \delta_e = 0 means \delta_e_sensor = 0
+
+        # I'm assuming that we have additive systmeatics to the total shape
+        # |e| = |e|_0 + \delta e_optical + \delta_e
+        # <|e|> = |e|_0 + \delta e_optical
+        
         den_all = (en_total[self.spot_filter]-en_cal[self.spot_filter])/e0_cal[self.spot_filter]
 
         self.e0 = de0_all[nanmask].flatten()
@@ -536,6 +569,39 @@ class SpotgridCatalog():
         # self.e1_mean = np.nanmedian(self.e1, axis=1)
         # self.e2_mean = np.nanmedian(self.e2, axis=1)
         # self.shear_std = np.nanstd(self.shear, axis=1)
+
+    def compute_ellipticities3(self):
+        """compute_ellipticities3 
+
+        After talking w/ Yousuke we decided to compute ellipticities in terms of
+        delta Iij directly
+
+        March 6th, 2023
+        """
+        nanmask = np.isfinite(self.deltaXX) #masks all the NaN entries created when a catalog didn't have 2401 entries
+
+        e0_total = self.xx_arr+self.yy_arr
+        e1_total = (self.xx_arr-self.yy_arr)#/e0_total
+        e2_total = 2*self.xy_arr#/e0_total
+        en_total = np.sqrt(e1_total**2+e2_total**2)
+        
+        ## calibrating the measurements
+        e0_cal = self.xx_cal_arr+self.yy_cal_arr
+        e1_cal = self.xx_cal_arr-self.yy_cal_arr
+        e2_cal = 2*self.xy_cal_arr
+        en_cal = np.sqrt(e1_cal**2+e2_cal**2)
+
+        de0_all = (self.dxx_arr+self.dyy_arr)[self.spot_filter]/e0_cal[self.spot_filter]
+        de1_all = (self.dxx_arr-self.dyy_arr)[self.spot_filter]/e0_cal[self.spot_filter]
+        de2_all = (2*self.dxy_arr)[self.spot_filter]/e0_cal[self.spot_filter]
+        den_all = (en_total[self.spot_filter]-en_cal[self.spot_filter])/e0_cal[self.spot_filter]
+
+        self.e0 = de0_all[nanmask].flatten()
+        self.e1 = de1_all[nanmask].flatten()
+        self.e2 = de2_all[nanmask].flatten()
+        # just to further tests
+        self.shear = den_all[nanmask].flatten()
+
 
     def get_imaging_map(self):
         dmap = defaultdict()
